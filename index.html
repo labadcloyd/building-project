@@ -24,19 +24,43 @@
             margin: 0;
             padding: 0;
         }
+				.default-shadow {
+					box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.10);
+					-webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.10);
+					-moz-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.10);
+				}
 				/* ------ COMPONENTS ------ */
         button {
-            background: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
+					padding: 10px 32px;
+					border: 2px solid #00000000;
+					cursor: pointer;
+					font-weight: 600;
+					border-radius: 8px;
+					font-size: 14px;
+					background-color: #2380BF;
+					color: #fff;
+					transition: .3s;
+					box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.10);
+					-webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.10);
+					-moz-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.10);
         }
         button:hover {
-            background: #0056b3;
+					background: #00000000;
+					border: 2px solid #2380BF;
+					color: #2380BF;
         }
+				button.secondary {
+					background-color: #fff;
+					color: #2380BF;
+				}
+				button.tertiary {
+					background-color: #00000000;
+					color: #2380BF;
+					border: 2px solid #fff;
+					box-shadow: none;
+					-webkit-box-shadow: none;
+					-moz-box-shadow: none;
+				}
 
 				/* ------ LAYOUTS ------ */
 				.section-wrapper {
@@ -63,6 +87,7 @@
 					height: 100%;
 					top: 0;
 					left: 0;
+					z-index: -1;
 				}
 				.section-line-container {
 					display: flex;
@@ -87,20 +112,19 @@
 	<!-- HERO SECTION -->
 	<div class="section-wrapper">
 		<div class="section-container">
-
-			<button>CLICK ME</button>
+ 
 
 		</div>
 
-			<div class="section-line-wrapper">
-				<div class="section-line-container">
-					<div class="section-line-solid"></div>
-					<div class="section-line-dashed"></div>
-					<div class="section-line-dashed"></div>
-					<div class="section-line-dashed"></div>
-					<div class="section-line-solid"></div>
-				</div>
+		<div class="section-line-wrapper">
+			<div class="section-line-container">
+				<div class="section-line-solid"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-solid"></div>
 			</div>
+		</div>
 	</div>
 
     <!-- JavaScript -->
