@@ -7,7 +7,6 @@
     <title>Victory Dumaguete - Building Project</title>
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -152,7 +151,7 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				background-color: #00000080;
+				transition: .3s;
 			}
 			nav .nav-container {
 				display: flex;
@@ -271,20 +270,64 @@
 		</div>
 	</div>
 
+	<div style="height: 1000px;"></div>
+
     <!-- JavaScript -->
 
 
 
 
 
-    <script>
-        // Fallback JavaScript if external script fails to load
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("clickMe").addEventListener("click", function () {
-                document.getElementById("message").innerText = "Button Clicked!";
-            });
-        });
-    </script>
+		<!-- ========== NAVBAR SCRIPT ========== -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		var title = document.querySelector(".hero-section-title");
+		var navbar = document.querySelector("nav");
+		var ticking = false;
+
+		function isElementInViewport(el) {
+				if (!el) return false; // Prevent errors if element doesn't exist
+				
+				var rect = el.getBoundingClientRect();
+				var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+				var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+				return (
+						rect.top >= 0 &&
+						rect.left >= 0 &&
+						rect.bottom <= windowHeight &&
+						rect.right <= windowWidth
+				);
+		}
+
+		function handleScroll() {
+				if (!title || !navbar) return; // Safety check for older browsers
+				
+				if (isElementInViewport(title)) {
+						navbar.style.backgroundColor = "rgba(0, 0, 0, 0)";
+				} else {
+						navbar.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+				}
+		}
+
+		function onScrollOrResize() {
+				if (!ticking) {
+						requestAnimationFrame(function () {
+								handleScroll();
+								ticking = false;
+						});
+						ticking = true;
+				}
+		}
+
+		// Attach event listeners
+		window.addEventListener("scroll", onScrollOrResize);
+		window.addEventListener("resize", onScrollOrResize); // Handles viewport changes
+
+		// Run once on page load to set the correct navbar state
+		handleScroll();
+	});
+</script>
 
 </body>
 </html>
