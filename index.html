@@ -8,24 +8,23 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     <!-- Fallback Styles -->
     <style>
+				* {
+					margin: 0;
+					box-sizing: border-box;
+				}
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+            font-family: "Archivo", sans-serif;
+            background-color: #fff;
             margin: 0;
             padding: 0;
-            text-align: center;
         }
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
+				/* ------ COMPONENTS ------ */
         button {
             background: #007bff;
             color: white;
@@ -38,15 +37,77 @@
         button:hover {
             background: #0056b3;
         }
+
+				/* ------ LAYOUTS ------ */
+				.section-wrapper {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 100%;
+					min-height: 600px;
+					position: relative;
+				}
+				.section-container {
+					display: flex;
+					width: 100%;
+					max-width: 1280px;
+					position: relative;
+				}
+				/* ------ LINESSS ------ */
+				.section-line-wrapper {
+					display: flex; 
+					align-items: center; 
+					justify-content: center;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+				}
+				.section-line-container {
+					display: flex;
+					justify-content: space-between;
+					width: 100%;
+					height: 100%;
+					max-width: 1280px;
+					position: relative;
+				}
+				.section-line-dashed{
+					height: 100%;
+					border-right: 1px dashed #ececec;
+				}
+				.section-line-solid{
+					height: 100%;
+					border-right: 1px solid #ececec;
+				}
     </style>
 </head>
 <body>
 
-    <div class="container"> 
-    </div>
+	<!-- HERO SECTION -->
+	<div class="section-wrapper">
+		<div class="section-container">
+
+			<button>CLICK ME</button>
+
+		</div>
+
+			<div class="section-line-wrapper">
+				<div class="section-line-container">
+					<div class="section-line-solid"></div>
+					<div class="section-line-dashed"></div>
+					<div class="section-line-dashed"></div>
+					<div class="section-line-dashed"></div>
+					<div class="section-line-solid"></div>
+				</div>
+			</div>
+	</div>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+
+
+
+
 
     <script>
         // Fallback JavaScript if external script fails to load
