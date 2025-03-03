@@ -36,7 +36,7 @@
 				}
 				a { cursor: pointer; text-decoration: none;}
 				/* Heading Styles */
-				h1 { font-size: 2.5rem; /* ~40px */ font-weight: bold;}
+				h1 { font-size: 3rem; /* ~40px */ font-weight: bold;}
 				h2 { font-size: 2rem; /* ~32px */ font-weight: bold;}
 				h3 { font-size: 1.75rem; /* ~28px */ font-weight: bold;}
 				h4 { font-size: 1.5rem; /* ~24px */ font-weight: bold;}
@@ -45,6 +45,7 @@
 				p {
 					font-size: 1rem; /* ~16px */
 					line-height: 1.5;
+					font-weight: 200;
 				}
 
 				/* Responsive Typography */
@@ -105,6 +106,7 @@
 				}
 				.section-container {
 					display: flex;
+					flex-direction: column;
 					width: 100%;
 					max-width: 1280px;
 					position: relative;
@@ -131,11 +133,17 @@
 				}
 				.section-line-dashed{
 					height: 100%;
-					border-right: 1px dashed #ececec;
+					border-right: 1px dashed rgba(53, 68, 71, 0.10);
 				}
 				.section-line-solid{
 					height: 100%;
-					border-right: 1px solid #ececec;
+					border-right: 1px solid rgba(53, 68, 71, 0.10);
+				}
+				.section-top-line {
+					border-top: 1px dashed rgba(53, 68, 71, 0.10);
+				}
+				.section-bottom-line {
+					border-bottom: 1px dashed rgba(53, 68, 71, 0.10);
 				}
     </style>
 
@@ -188,7 +196,7 @@
 				flex-direction: column;
 				color: #fff; 
 				padding: 120px 0; 
-				min-height: 100vh; 
+				min-height: 500px; 
 				background-image: url('https://res.cloudinary.com/dzpphtqox/image/upload/v1741025615/Building%20Projects/Lines.png');
 				background-repeat: no-repeat;
 				background-position: top;
@@ -208,6 +216,47 @@
 				height: 100%;
 			}
     </style>
+
+		<!-- ========== HOOK SECTION STYLES ========== -->
+    <style>
+			.hook-container {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				padding: 80px 0;
+				width: 100%;
+			}
+			.hook-text-wrapper {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				text-align: center;
+				gap: 15px;
+			}
+			.hook-text-wrapper h1 { margin-bottom: 15px; }
+			.hook-text-wrapper p { max-width: 750px; }
+			.hook-text-wrapper button { margin-top: 20px; padding: 10px 45px;}
+			.hook-text-wrapper span { color: #2380BF;}
+
+			/* CAROUSEL */
+			.hook-carousel-wrapper {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				padding: 0 0 80px 0;
+				width: 100%;
+			}
+			.hook-carousel-container img {
+				border-radius: 20px;
+				box-shadow: 4px 4px 15px 0px rgba(0,0,0,0.20);
+				-webkit-box-shadow: 4px 4px 15px 0px rgba(0,0,0,0.20);
+				-moz-box-shadow: 4px 4px 15px 0px rgba(0,0,0,0.20);
+			}
+		</style>
 </head>
 <body>
 	<!-- NAVBAR -->
@@ -256,7 +305,35 @@
 					<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741025998/Building%20Projects/world-map-silhouette-global-mapping-in-the-digital-age-illustration-png-2_1.png">
 				</div>
 			</div>
+		</div>
 
+		<div class="section-line-wrapper">
+			<div class="section-line-container">
+				<div class="section-line-solid"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-solid"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- HOOK SECTION -->
+	<div class="section-wrapper section-top-line section-bottom-line">
+		<div class="section-container"> 
+			<div class="hook-container">
+				<div class="hook-text-wrapper">
+					<h1>Transforming <span>Leaders</span>. Transforming <span>Nations</span>.</h1>
+					<p>We are called to reach every nation in our generation by raising future leaders in the campuses today. </p>
+					<p>Through our <b>25 AND BEYOND PROJECT</b>, we are committed to reaching out the next generation in Dumaguete—shaping leaders who will make a lasting impact across nations.</p>
+					<a><button>LEARN MORE</button></a>
+				</div>
+			</div>
+			<div class="hook-carousel-wrapper">
+				<div class="hook-carousel-container">
+					<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741030651/Building%20Projects/476912434_1071594211672473_526760610120245937_n_1.png">
+				</div>
+			</div>
 		</div>
 
 		<div class="section-line-wrapper">
