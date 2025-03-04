@@ -42,11 +42,7 @@
 				h4 { font-size: 1.5rem; /* ~24px */ font-weight: bold;}
 				h5 { font-size: 1.25rem; /* ~20px */ font-weight: bold;}
 				h6 { font-size: 1rem; /* ~16px */ font-weight: bold; color: #555; /* Slightly lighter than other headings */}
-				p {
-					font-size: 1rem; /* ~16px */
-					line-height: 1.5;
-					font-weight: 200;
-				}
+				p { font-size: 1rem; line-height: 1.5; font-weight: 200; }
 
 				/* Responsive Typography */
 				@media (max-width: 768px) {
@@ -247,14 +243,156 @@
 				flex-direction: column;
 				justify-content: flex-start;
 				align-items: center;
-				padding: 0 0 80px 0;
+				margin: 0 0 80px 0;
 				width: 100%;
+				position: relative;
 			}
-			.hook-carousel-container img {
+			.hook-carousel-img-container {
+				display: flex;
+				position: relative;
+				width: 100%;
+				cursor: pointer;
+				position: absolute;
+				transition: 1s;
+			}
+			.hook-carousel-img-container img {
 				border-radius: 20px;
 				box-shadow: 4px 4px 15px 0px rgba(0,0,0,0.20);
 				-webkit-box-shadow: 4px 4px 15px 0px rgba(0,0,0,0.20);
 				-moz-box-shadow: 4px 4px 15px 0px rgba(0,0,0,0.20);
+				width: 100%;
+				object-fit: cover;
+				max-height: 450px;
+			}
+			.hook-carousel-img-fg {
+				width: 100%;
+				height: fit-content;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				border-radius: 20px;
+				background: rgb(35,128,191);
+				background: -moz-linear-gradient(180deg, rgba(35,128,191,0) 35%, rgba(35,128,191,0.9) 80%);
+				background: -webkit-linear-gradient(180deg, rgba(35,128,191,0) 35%, rgba(35,128,191,0.9) 80%);
+				background: linear-gradient(180deg, rgba(35,128,191,0) 35%, rgba(35,128,191,0.9) 80%);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2380bf",endColorstr="#2380bf",GradientType=1);
+
+				padding: 180px 20px 20px 20px;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				color: #fff !important;
+				opacity: 1;
+				transition: 2s opacity;
+			}
+			.hook-carousel-img-fg .hidden {
+				opacity: 0 !important; 
+				z-index: 0 !important;
+			}
+			.hook-carousel-img-container p {
+				color: #fff;
+				overflow: hidden;
+				transition: max-height 0.3s ease, opacity 0.3s ease;
+				max-height: 100px;
+			}
+			.hook-carousel-img-container span {
+				color: #fff;
+				font-weight: 200;
+				line-height: 1.5;
+				overflow: hidden;
+				transition: max-height 0.3s ease, opacity 0.3s ease;
+				max-height: 0;
+			}
+			.hook-carousel-img-container:hover span {
+				height: fit-content;
+				opacity: 1;
+				max-height: 100px;
+			}
+			.hook-carousel-img-left p { max-height: 0; }
+			.hook-carousel-img-left {
+				width: 23% !important;
+				left: 1%;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 1;
+			}
+			.hook-carousel-img-left img{ filter: blur(2px); border-radius: 20px;}
+
+			.hook-carousel-img-right p { max-height: 0; }
+			.hook-carousel-img-right {
+				width: 23% !important;
+				left: 76%;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 1;
+			}
+			.hook-carousel-img-right img{ filter: blur(2px); border-radius: 20px;}
+
+			.hook-carousel-img-inactive p { max-height: 0; }
+			.hook-carousel-img-inactive {
+				opacity: 0;
+				width: 23% !important;
+				left: 76%;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 0;
+			}
+			.hook-carousel-img-inactive img{ filter: blur(2px); border-radius: 20px;}
+
+			.hook-carousel-img-active {
+				width: 50% !important;
+				left: 25%;
+				z-index: 2;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			.hook-carousel-img-placeholder { opacity: 0; width: 50%; }
+			.hook-carousel-img-placeholder img { max-height: 450px; width: 100%;}
+
+			/* HOOK CONTENT */
+			.hook-content-wrapper {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				padding-bottom: 100px;
+				position: relative;
+			}
+			.hook-content-container { 
+				display: flex;
+				flex: 1;
+				flex-direction: column;
+				align-items: center;
+				border-top: 1px dashed rgba(53, 68, 71, 0.10);
+				padding: 20px;
+			}
+			.hook-content-container h5 {
+				font-weight: 200;
+				color: rgba(53, 68, 71, 0.50);
+				transition: .5s;
+			}
+			.hook-progress-bar-container {
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+				width: 25%;
+				background-color: #2381bf35;
+				height: 4px;
+				border-radius: 4px;
+				position: absolute;
+				top: 0;
+				left: 0.1%;
+				transition: .3s ease-out;
+			}
+			.hook-progress-bar {
+				width: 0%;
+				background-color: #2381bf;
+				height: 4px;
+				border-radius: 4px;
+			}
+			.hook-content-container.active h5 {
+				color: #2380BF;
+				font-weight: 600;
 			}
 		</style>
 </head>
@@ -329,9 +467,65 @@
 					<a><button>LEARN MORE</button></a>
 				</div>
 			</div>
-			<div class="hook-carousel-wrapper">
-				<div class="hook-carousel-container">
-					<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741030651/Building%20Projects/476912434_1071594211672473_526760610120245937_n_1.png">
+			<div class="hook-carousel-wrapper"> 
+
+					<div class="hook-carousel-img-container hook-carousel-img-inactive" id="hook-carousel-1">
+						<div class="hook-carousel-img-fg hidden">
+							<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b></p>
+							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis in quam et egestas. Pellentesque </span>
+						</div>
+						<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741055629/Building%20Projects/477031978_1071594395005788_784685226636466821_n.jpg">
+					</div>
+
+					<div class="hook-carousel-img-container hook-carousel-img-left" id="hook-carousel-2">
+						<div class="hook-carousel-img-fg hidden">
+							<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b></p>
+							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis in quam et egestas. Pellentesque </span>
+						</div>
+						<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741054244/Building%20Projects/476809431_1071594208339140_2129658794575671217_n.jpg">
+					</div>
+
+					<div class="hook-carousel-img-container hook-carousel-img-active" id="hook-carousel-3">
+						<div class="hook-carousel-img-fg">
+							<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b></p>
+							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis in quam et egestas. Pellentesque </span>
+						</div>
+						<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741030651/Building%20Projects/476912434_1071594211672473_526760610120245937_n_1.png">
+					</div>
+
+					<div class="hook-carousel-img-container hook-carousel-img-right" id="hook-carousel-4">
+						<div class="hook-carousel-img-fg hidden">
+							<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b></p>
+							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis in quam et egestas. Pellentesque </span>
+						</div>
+						<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741054263/Building%20Projects/477445705_1071594225005805_2520760378566132057_n.jpg">
+					</div>
+
+					<div class="hook-carousel-img-placeholder">
+						<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741030651/Building%20Projects/476912434_1071594211672473_526760610120245937_n_1.png">
+					</div>
+ 
+			</div>
+
+			<div class="hook-content-wrapper">
+				<div class="hook-progress-bar-container" style="left: 0%;">
+					<div class="hook-progress-bar"></div>
+				</div>
+
+				<div class="hook-content-container active" id="hook-content-progress-1">
+					<h5>Lorem Ipsum</h5>
+				</div>
+
+				<div class="hook-content-container" id="hook-content-progress-2">
+					<h5>Lorem Ipsum</h5>
+				</div>
+
+				<div class="hook-content-container" id="hook-content-progress-3">
+					<h5>Lorem Ipsum</h5>
+				</div>
+
+				<div class="hook-content-container" id="hook-content-progress-4">
+					<h5>Lorem Ipsum</h5>
 				</div>
 			</div>
 		</div>
@@ -355,7 +549,7 @@
 
 
 
-		<!-- ========== NAVBAR SCRIPT ========== -->
+	<!-- ========== NAVBAR SCRIPT ========== -->
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 		var title = document.querySelector(".hero-section-title");
@@ -404,7 +598,88 @@
 		// Run once on page load to set the correct navbar state
 		handleScroll();
 	});
-</script>
+	</script>
 
+	<!-- ========== HOOK CAROUSEL SCRIPT ========== -->
+	 <script>
+
+		function changeHookCarouselClass() {
+			const hook1 = document.querySelector('#hook-carousel-1')
+			const hook2 = document.querySelector('#hook-carousel-2')
+			const hook3 = document.querySelector('#hook-carousel-3')
+			const hook4 = document.querySelector('#hook-carousel-4')
+
+			const hook1Child = hook1.children[0]
+			const hook2Child = hook1.children[0]
+			const hook3Child = hook1.children[0]
+			const hook4Child = hook1.children[0]
+			hook1.className = "hook-carousel-img-container hook-carousel-img-inactive"
+			hook2.className = "hook-carousel-img-container hook-carousel-img-left"
+			hook3.className = "hook-carousel-img-container hook-carousel-img-active"
+			hook4.className = "hook-carousel-img-container hook-carousel-img-right"
+			hook1Child.className = "hook-carousel-img-fg hidden"
+			hook2Child.className = "hook-carousel-img-fg hidden"
+			hook3Child.className = "hook-carousel-img-fg hidden"
+			hook4Child.className = "hook-carousel-img-fg"
+			
+			hook1.id = "hook-carousel-4"
+			hook2.id = "hook-carousel-1"
+			hook3.id = "hook-carousel-2"
+			hook4.id = "hook-carousel-3"
+
+		}
+		
+		function animateHookProgressBar() {
+			const progressBar = document.querySelector(".hook-progress-bar");
+			progressBar.style.transition = "none"; // Remove transition for reset
+			progressBar.style.width = "0%"; // Reset to 0%
+
+			setTimeout(() => {
+				progressBar.style.transition = "width 7s linear"; // Smooth transition
+				progressBar.style.width = "100%"; // Animate to 100%
+			}, 0.1); 
+		}
+		function changeHookProgressClass() {
+			const hook1 = document.querySelector('#hook-content-progress-1')
+			const hook2 = document.querySelector('#hook-content-progress-2')
+			const hook3 = document.querySelector('#hook-content-progress-3')
+			const hook4 = document.querySelector('#hook-content-progress-4')
+			const progressbarContainer = document.querySelector('.hook-progress-bar-container') 
+			
+			if (progressbarContainer.style.left === '0%') { 
+				animateHookProgressBar()
+				setTimeout(() => { progressbarContainer.style.left = "25%" }, 0.1); 
+				hook1.className = 'hook-content-container'
+				hook2.className = 'hook-content-container active'
+				return
+			} 
+			if (progressbarContainer.style.left === '25%') {
+				animateHookProgressBar()
+				setTimeout(() => { progressbarContainer.style.left = "50%" }, 0.1); 
+				hook2.className = 'hook-content-container'
+				hook3.className = 'hook-content-container active'
+				return
+			}
+			if (progressbarContainer.style.left === '50%') {
+				animateHookProgressBar()
+				setTimeout(() => { progressbarContainer.style.left = "75%" }, 0.1); 
+				hook3.className = 'hook-content-container'
+				hook4.className = 'hook-content-container active'
+				return
+			}
+			if (progressbarContainer.style.left === '75%') {
+				animateHookProgressBar()
+				setTimeout(() => { progressbarContainer.style.left = "0%" }, 0.1); 
+				hook4.className = 'hook-content-container'
+				hook1.className = 'hook-content-container active'
+				return
+			}
+
+		} 
+		changeHookCarouselClass()
+		animateHookProgressBar()
+		setInterval(changeHookCarouselClass, 7000)
+		setInterval(changeHookProgressClass, 7000)
+	 </script>
 </body>
 </html>
