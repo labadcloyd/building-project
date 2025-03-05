@@ -340,21 +340,15 @@
 				max-height: 100px;
 			}
 			@keyframes hookSlideLoopFG {
-				/* First Frame - Stay visible (0%) */
 				0%, 24% { opacity: 0; }
-				/* Transition (1s duration) */
+				
 				25%, 30% { opacity: 0; }
-				/* Stay invisible */
 				49% { opacity: 0; }
 				
-				/* Second Frame - Transition to opacity 1 */
 				55%, 57% { opacity: 1; }
-				/* Stay visible */
 				74% { opacity: 1; }
 				
-				/* Transition (1s duration) */
 				75%, 80% { opacity: 0; }
-				/* Stay invisible */
 				97% { opacity: 0; }
 				
 				/* Reset to First Frame */
@@ -405,6 +399,68 @@
 				color: rgba(53, 68, 71, 0.50);
 				transition: .5s;
 			}
+			@keyframes hookSlideLoopContent {
+				0%, 24% { color: #2380BF; font-weight: 600;}
+				/* Transition */
+				25%, 27% { font-weight: 200; color: rgba(53, 68, 71, 0.50); }
+				49% { font-weight: 200; color: rgba(53, 68, 71, 0.50); }
+				
+				55%, 57% { font-weight: 200; color: rgba(53, 68, 71, 0.50); } 
+				74% { font-weight: 200; color: rgba(53, 68, 71, 0.50); }
+				 
+				75%, 77% { font-weight: 200; color: rgba(53, 68, 71, 0.50); } 
+				97% { font-weight: 200; color: rgba(53, 68, 71, 0.50); }
+				
+				/* Reset to First Frame */
+				100% { color: #2380BF; font-weight: 600; }
+			}
+
+			#hook-content-progress-1 h5{
+				animation: hookSlideLoopContent 28s ease-in-out infinite;
+				animation-delay: 0s;
+			} 
+			#hook-content-progress-2 h5{
+				animation: hookSlideLoopContent 28s ease-in-out infinite;
+				animation-delay: -21s; 
+			} 
+			#hook-content-progress-3 h5{
+				animation: hookSlideLoopContent 28s ease-in-out infinite;
+				animation-delay: -14s; 
+			} 
+			#hook-content-progress-4 h5{
+				animation: hookSlideLoopContent 28s ease-in-out infinite;
+				animation-delay: -7s; 
+			}
+
+			@keyframes hookSlideLoopBarContainer {
+				0%, 24% { transform: translateX(0);}
+				/* Transition */
+				25%, 26% { transform: translateX(100%); }
+				49% { transform: translateX(100%); }
+				
+				50%, 51% { transform: translateX(200%); } 
+				74% { transform: translateX(200%); }
+				 
+				75%, 76% { transform: translateX(300%); } 
+				99% { transform: translateX(300%); }
+				
+				/* Reset to First Frame */
+				100% { transform: translateX(0%); }
+			}
+
+			@keyframes hookSlideLoopBar {
+				0% { transform: translateX(-100%);}
+				24%, 25% { transform: translateX(0%);}
+				/* Transition */
+				26% { transform: translateX(-100%); }
+				50%, 50% { transform: translateX(0%); }
+				
+				51% { transform: translateX(-100%); } 
+				75%, 75% { transform: translateX(0%); }
+				 
+				76% { transform: translateX(-100%); } 
+				100%, 100% { transform: translateX(0%); }
+			}
 			.hook-progress-bar-container {
 				display: flex;
 				align-items: flex-start;
@@ -416,13 +472,15 @@
 				position: absolute;
 				top: 0;
 				left: 0.1%;
-				transition: .3s ease-out;
+				animation: hookSlideLoopBarContainer 28s ease-in-out infinite;
+				overflow: hidden;
 			}
 			.hook-progress-bar {
-				width: 0%;
+				width: 100%;
 				background-color: #2381bf;
 				height: 4px;
 				border-radius: 4px;
+				animation: hookSlideLoopBar 28s ease-in-out infinite;
 			}
 			.hook-content-container.active h5 {
 				color: #2380BF;
@@ -633,87 +691,5 @@
 		handleScroll();
 	});
 	</script>
-
-	<!-- ========== HOOK CAROUSEL SCRIPT ========== -->
-	 <!-- <script>
-
-		function changeHookCarouselClass() {
-			const hook1 = document.querySelector('#hook-carousel-1')
-			const hook2 = document.querySelector('#hook-carousel-2')
-			const hook3 = document.querySelector('#hook-carousel-3')
-			const hook4 = document.querySelector('#hook-carousel-4')
-
-			const hook1Child = hook1.children[0]
-			const hook2Child = hook1.children[0]
-			const hook3Child = hook1.children[0]
-			const hook4Child = hook1.children[0]
-			hook1.className = "hook-carousel-img-container hook-carousel-img-inactive"
-			hook2.className = "hook-carousel-img-container hook-carousel-img-left"
-			hook3.className = "hook-carousel-img-container hook-carousel-img-active"
-			hook4.className = "hook-carousel-img-container hook-carousel-img-right"
-			hook1Child.className = "hook-carousel-img-fg"
-			hook2Child.className = "hook-carousel-img-fg"
-			hook3Child.className = "hook-carousel-img-fg"
-			hook4Child.className = "hook-carousel-img-fg active"
-			
-			hook1.id = "hook-carousel-4"
-			hook2.id = "hook-carousel-1"
-			hook3.id = "hook-carousel-2"
-			hook4.id = "hook-carousel-3"
-
-		}
-		
-		function animateHookProgressBar() {
-			const progressBar = document.querySelector(".hook-progress-bar");
-			progressBar.style.transition = "none"; // Remove transition for reset
-			progressBar.style.width = "0%"; // Reset to 0%
-
-			setTimeout(() => {
-				progressBar.style.transition = "width 7s linear"; // Smooth transition
-				progressBar.style.width = "100%"; // Animate to 100%
-			}, 0.1); 
-		}
-		function changeHookProgressClass() {
-			const hook1 = document.querySelector('#hook-content-progress-1')
-			const hook2 = document.querySelector('#hook-content-progress-2')
-			const hook3 = document.querySelector('#hook-content-progress-3')
-			const hook4 = document.querySelector('#hook-content-progress-4')
-			const progressbarContainer = document.querySelector('.hook-progress-bar-container') 
-			
-			if (progressbarContainer.style.left === '0%') { 
-				animateHookProgressBar()
-				setTimeout(() => { progressbarContainer.style.left = "25%" }, 0.1); 
-				hook1.className = 'hook-content-container'
-				hook2.className = 'hook-content-container active'
-				return
-			} 
-			if (progressbarContainer.style.left === '25%') {
-				animateHookProgressBar()
-				setTimeout(() => { progressbarContainer.style.left = "50%" }, 0.1); 
-				hook2.className = 'hook-content-container'
-				hook3.className = 'hook-content-container active'
-				return
-			}
-			if (progressbarContainer.style.left === '50%') {
-				animateHookProgressBar()
-				setTimeout(() => { progressbarContainer.style.left = "75%" }, 0.1); 
-				hook3.className = 'hook-content-container'
-				hook4.className = 'hook-content-container active'
-				return
-			}
-			if (progressbarContainer.style.left === '75%') {
-				animateHookProgressBar()
-				setTimeout(() => { progressbarContainer.style.left = "0%" }, 0.1); 
-				hook4.className = 'hook-content-container'
-				hook1.className = 'hook-content-container active'
-				return
-			}
-
-		} 
-		changeHookCarouselClass()
-		animateHookProgressBar()
-		setInterval(changeHookCarouselClass, 7000)
-		setInterval(changeHookProgressClass, 7000)
-	 </script> -->
 </body>
 </html>
