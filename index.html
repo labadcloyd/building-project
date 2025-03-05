@@ -250,11 +250,48 @@
 			.hook-carousel-img-container {
 				display: flex;
 				position: relative;
-				width: 100%;
+				width: 50%;
 				cursor: pointer;
 				position: absolute;
 				transition: 1s;
 			}
+
+			@keyframes hookSlideLoop {
+				/* First Frame - Stay at */
+				0%, 24.11% { transform: translateX(-75%) scale(0.45); opacity: 1; z-index: 0;}
+				/* Transition to Second Frame*/
+				25.89% { transform: translateX(75%) scale(0.45); opacity: 0; z-index: 0;}
+				/* Second Frame - Stay at*/
+				49.11% { transform: translateX(75%) scale(0.45); opacity: 0; z-index: 0;}
+				
+				/* Transition to Third Frame (75%) */
+				50.89% { transform: translateX(75%) scale(0.45); opacity: 1; z-index: 0;}
+				/* Third Frame - Stay at (75%) */
+				74.11% { transform: translateX(75%) scale(0.45); opacity: 1; z-index: 0;}
+				/* Transition to Fourth Frame (75%, fade out) */
+				75.89% { transform: translateX(0%) scale(1); opacity: 1; z-index: 0;}
+				/* Fourth Frame - Stay invisible */
+				99.11% { transform: translateX(0%) scale(1); opacity: 1; z-index: 0;}
+				/* Reset to First Frame */
+				100% { transform: translateX(-75%) scale(0.45); opacity: 1; z-index: 1;}
+			}
+			.hook-carousel-img-container#hook-carousel-1 {
+				animation: hookSlideLoop 28s ease-in-out infinite;
+				animation-delay: -7s;
+			}
+			.hook-carousel-img-container#hook-carousel-2 {
+				animation: hookSlideLoop 28s ease-in-out infinite;
+				animation-delay: -14s;
+			}
+			.hook-carousel-img-container#hook-carousel-3 {
+				animation: hookSlideLoop 28s ease-in-out infinite;
+				animation-delay: -21s;
+			}
+			.hook-carousel-img-container#hook-carousel-4 {
+				animation: hookSlideLoop 28s ease-in-out infinite;
+				animation-delay: 0s;
+			}
+
 			.hook-carousel-img-container img {
 				border-radius: 20px;
 				box-shadow: 4px 4px 15px 0px rgba(0,0,0,0.20);
@@ -282,12 +319,6 @@
 				flex-direction: column;
 				justify-content: flex-end;
 				color: #fff !important;
-				opacity: 1;
-				transition: 2s opacity;
-			}
-			.hook-carousel-img-fg .hidden {
-				opacity: 0 !important; 
-				z-index: 0 !important;
 			}
 			.hook-carousel-img-container p {
 				color: #fff;
@@ -308,46 +339,49 @@
 				opacity: 1;
 				max-height: 100px;
 			}
-			.hook-carousel-img-left p { max-height: 0; }
-			.hook-carousel-img-left {
-				width: 23% !important;
-				left: 1%;
-				top: 50%;
-				transform: translateY(-50%);
-				z-index: 1;
-			}
-			.hook-carousel-img-left img{ filter: blur(2px); border-radius: 20px;}
-
-			.hook-carousel-img-right p { max-height: 0; }
-			.hook-carousel-img-right {
-				width: 23% !important;
-				left: 76%;
-				top: 50%;
-				transform: translateY(-50%);
-				z-index: 1;
-			}
-			.hook-carousel-img-right img{ filter: blur(2px); border-radius: 20px;}
-
-			.hook-carousel-img-inactive p { max-height: 0; }
-			.hook-carousel-img-inactive {
-				opacity: 0;
-				width: 23% !important;
-				left: 76%;
-				top: 50%;
-				transform: translateY(-50%);
-				z-index: 0;
-			}
-			.hook-carousel-img-inactive img{ filter: blur(2px); border-radius: 20px;}
-
-			.hook-carousel-img-active {
-				width: 50% !important;
-				left: 25%;
-				z-index: 2;
-				top: 50%;
-				transform: translateY(-50%);
+			@keyframes hookSlideLoopFG {
+				/* First Frame - Stay visible (0%) */
+				0%, 24% { opacity: 0; }
+				/* Transition (1s duration) */
+				25%, 30% { opacity: 0; }
+				/* Stay invisible */
+				49% { opacity: 0; }
+				
+				/* Second Frame - Transition to opacity 1 */
+				55%, 57% { opacity: 1; }
+				/* Stay visible */
+				74% { opacity: 1; }
+				
+				/* Transition (1s duration) */
+				75%, 80% { opacity: 0; }
+				/* Stay invisible */
+				97% { opacity: 0; }
+				
+				/* Reset to First Frame */
+				100% { opacity: 0; }
 			}
 
-			.hook-carousel-img-placeholder { opacity: 0; width: 50%; }
+			#hook-carousel-fg-1 {
+				animation: hookSlideLoopFG 28s ease-in-out infinite;
+				animation-delay: 0s;
+			}
+
+			#hook-carousel-fg-2 {
+				animation: hookSlideLoopFG 28s ease-in-out infinite;
+				animation-delay: -7s;
+			}
+
+			#hook-carousel-fg-3 {
+				animation: hookSlideLoopFG 28s ease-in-out infinite;
+				animation-delay: -14s;
+			}
+
+			#hook-carousel-fg-4 {
+				animation: hookSlideLoopFG 28s ease-in-out infinite;
+				animation-delay: -21s;
+			}
+
+			.hook-carousel-img-placeholder { opacity: 0; width: 50%; z-index: -1;}
 			.hook-carousel-img-placeholder img { max-height: 450px; width: 100%;}
 
 			/* HOOK CONTENT */
@@ -420,7 +454,7 @@
 
 
 			<div class="nav-btn">
-				<a>
+				<a href="https://links.victorydumaguete.org/widget/form/iBfh4Zwnhu2TQdEt7344?notrack=true">
 					<button class="tertiary">GIVE</button>
 				</a>
 			</div>
@@ -434,7 +468,7 @@
 				<div class="hero-section-title-wrapper">
 					<h1 class="hero-section-title">Together</h1>
 					<h6 style="color: #fff;">LET US BUILD FOR GENERATIONS</h6>
-					<a>
+					<a href="https://links.victorydumaguete.org/widget/form/iBfh4Zwnhu2TQdEt7344?notrack=true">
 						<button class="secondary">BE PART OF THE VISION</button>
 					</a>
 				</div>
@@ -469,32 +503,32 @@
 			</div>
 			<div class="hook-carousel-wrapper"> 
 
-					<div class="hook-carousel-img-container hook-carousel-img-inactive" id="hook-carousel-1">
-						<div class="hook-carousel-img-fg hidden">
+					<div class="hook-carousel-img-container" id="hook-carousel-1">
+						<div class="hook-carousel-img-fg" id="hook-carousel-fg-1">
 							<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b></p>
 							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis in quam et egestas. Pellentesque </span>
 						</div>
 						<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741055629/Building%20Projects/477031978_1071594395005788_784685226636466821_n.jpg">
 					</div>
 
-					<div class="hook-carousel-img-container hook-carousel-img-left" id="hook-carousel-2">
-						<div class="hook-carousel-img-fg hidden">
+					<div class="hook-carousel-img-container" id="hook-carousel-2">
+						<div class="hook-carousel-img-fg" id="hook-carousel-fg-2">
 							<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b></p>
 							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis in quam et egestas. Pellentesque </span>
 						</div>
 						<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741054244/Building%20Projects/476809431_1071594208339140_2129658794575671217_n.jpg">
 					</div>
 
-					<div class="hook-carousel-img-container hook-carousel-img-active" id="hook-carousel-3">
-						<div class="hook-carousel-img-fg">
+					<div class="hook-carousel-img-container" id="hook-carousel-3">
+						<div class="hook-carousel-img-fg" id="hook-carousel-fg-3">
 							<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b></p>
 							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis in quam et egestas. Pellentesque </span>
 						</div>
 						<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741030651/Building%20Projects/476912434_1071594211672473_526760610120245937_n_1.png">
 					</div>
 
-					<div class="hook-carousel-img-container hook-carousel-img-right" id="hook-carousel-4">
-						<div class="hook-carousel-img-fg hidden">
+					<div class="hook-carousel-img-container" id="hook-carousel-4">
+						<div class="hook-carousel-img-fg" id="hook-carousel-fg-4">
 							<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b></p>
 							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis in quam et egestas. Pellentesque </span>
 						</div>
@@ -601,7 +635,7 @@
 	</script>
 
 	<!-- ========== HOOK CAROUSEL SCRIPT ========== -->
-	 <script>
+	 <!-- <script>
 
 		function changeHookCarouselClass() {
 			const hook1 = document.querySelector('#hook-carousel-1')
@@ -617,10 +651,10 @@
 			hook2.className = "hook-carousel-img-container hook-carousel-img-left"
 			hook3.className = "hook-carousel-img-container hook-carousel-img-active"
 			hook4.className = "hook-carousel-img-container hook-carousel-img-right"
-			hook1Child.className = "hook-carousel-img-fg hidden"
-			hook2Child.className = "hook-carousel-img-fg hidden"
-			hook3Child.className = "hook-carousel-img-fg hidden"
-			hook4Child.className = "hook-carousel-img-fg"
+			hook1Child.className = "hook-carousel-img-fg"
+			hook2Child.className = "hook-carousel-img-fg"
+			hook3Child.className = "hook-carousel-img-fg"
+			hook4Child.className = "hook-carousel-img-fg active"
 			
 			hook1.id = "hook-carousel-4"
 			hook2.id = "hook-carousel-1"
@@ -680,6 +714,6 @@
 		animateHookProgressBar()
 		setInterval(changeHookCarouselClass, 7000)
 		setInterval(changeHookProgressClass, 7000)
-	 </script>
+	 </script> -->
 </body>
 </html>
