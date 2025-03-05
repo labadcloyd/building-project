@@ -246,6 +246,7 @@
 				margin: 0 0 80px 0;
 				width: 100%;
 				position: relative;
+				min-height: 400px;
 			}
 			.hook-carousel-img-container {
 				display: flex;
@@ -529,6 +530,161 @@
 			.purpose-text-wrapper span { color: #2380BF;}
 
     </style>
+
+		<!-- ========== FEATURES SECTION STYLES ========== -->
+    <style>
+			.feature-wrapper {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				gap: 20px;
+				padding: 140px 0;
+				width: 100%;
+				background-image: url('https://res.cloudinary.com/dzpphtqox/image/upload/v1741025615/Building%20Projects/Lines.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+			}
+			.feature-container {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				position: relative;
+				min-height: 600px;
+			}
+			.feature-title-wrapper {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				width: 100%;
+				text-align: left;
+				gap: 15px;
+				padding: 0 20px;
+			}
+			.feature-title-wrapper h4 { margin-bottom: 20px;}
+			.feature-text-wrapper {
+				display: flex;
+				flex-direction: column;
+				max-width: 25%;
+				width: 100%;
+			}
+			#feature-1 { border-top: 1px dashed rgba(53, 68, 71, 0.10);}
+			.feature-text-container {
+				display: flex;
+				flex-direction: column; 
+				padding: 20px;
+				width: 100%;
+				border-bottom: 1px dashed rgba(53, 68, 71, 0.10);
+				overflow: hidden;
+				position: relative;
+			}
+			.feature-text-container p {
+				max-height: 0;
+				overflow: hidden;
+				height: fit-content;
+			}
+			.feature-text-container h5 {
+				font-weight: 200;
+			}
+
+			@keyframes featureTextLoop {
+				0% { max-height: 0; }
+				3% { max-height: 500px; }
+				17% { max-height: 500px; }
+				20% { max-height: 0; }
+				100% { max-height: 0; }
+			}
+			#feature-1 p{ animation: featureTextLoop 35s ease-in-out infinite; animation-delay: 0s; } 
+			#feature-2 p{ animation: featureTextLoop 35s ease-in-out infinite; animation-delay: 7s; } 
+			#feature-3 p{ animation: featureTextLoop 35s ease-in-out infinite; animation-delay: 14s; } 
+			#feature-4 p{ animation: featureTextLoop 35s ease-in-out infinite; animation-delay: 21s; }
+			#feature-5 p{ animation: featureTextLoop 35s ease-in-out infinite; animation-delay: 28s; }
+
+			@keyframes featureTitleLoop {
+				0% { font-weight: 200; color: #354447;}
+				1% { font-weight: 600; color: #2380BF;}
+				19% { font-weight: 600; color: #2380BF;}
+				20% { font-weight: 200; color: #354447}
+				100% { font-weight: 200; color: #354447}
+			}
+			#feature-1 h5{ animation: featureTitleLoop 35s ease-in-out infinite; animation-delay: 0s; } 
+			#feature-2 h5{ animation: featureTitleLoop 35s ease-in-out infinite; animation-delay: 7s; } 
+			#feature-3 h5{ animation: featureTitleLoop 35s ease-in-out infinite; animation-delay: 14s; } 
+			#feature-4 h5{ animation: featureTitleLoop 35s ease-in-out infinite; animation-delay: 21s; }
+			#feature-5 h5{ animation: featureTitleLoop 35s ease-in-out infinite; animation-delay: 28s; }
+			
+			.feature-progress-bar-container {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 4px;
+				background-color: #2381bf35;
+				overflow: hidden;
+			}
+			.feature-progress-bar {
+				height: 100%;
+				width: 4px;
+				background-color: #2381bf;
+			}
+
+			@keyframes featureProgressBarLoop {
+				0% { transform: translateY(-100%); }
+				19% { transform: translateY(0%); }
+				20% { transform: translateY(-100%); }
+				100% { transform: translateY(-100%); }
+			}
+			#feature-bar-1 { animation: featureProgressBarLoop 35s ease-in-out infinite; animation-delay: 0s; } 
+			#feature-bar-2 { animation: featureProgressBarLoop 35s ease-in-out infinite; animation-delay: 7s; } 
+			#feature-bar-3 { animation: featureProgressBarLoop 35s ease-in-out infinite; animation-delay: 14s; } 
+			#feature-bar-4 { animation: featureProgressBarLoop 35s ease-in-out infinite; animation-delay: 21s; }
+			#feature-bar-5 { animation: featureProgressBarLoop 35s ease-in-out infinite; animation-delay: 28s; }
+
+			@keyframes featureProgressBarContainerLoop {
+				0% { transform: translateY(-100%); }
+				1% { transform: translateY(0%); }
+				19% { transform: translateY(0%); }
+
+				20% { transform: translateY(200%); }
+				100% { transform: translateY(200%); }
+			}
+			#feature-bar-container-1 { animation: featureProgressBarContainerLoop 35s ease-in-out infinite; animation-delay: 0s; } 
+			#feature-bar-container-2 { animation: featureProgressBarContainerLoop 35s ease-in-out infinite; animation-delay: -28s; } 
+			#feature-bar-container-3 { animation: featureProgressBarContainerLoop 35s ease-in-out infinite; animation-delay: -21s; } 
+			#feature-bar-container-4 { animation: featureProgressBarContainerLoop 35s ease-in-out infinite; animation-delay: -14s; }
+			#feature-bar-container-5 { animation: featureProgressBarContainerLoop 35s ease-in-out infinite; animation-delay: -7s; }
+			
+
+			@keyframes featureImgContainerLoop {
+				0% { opacity: 0; }
+				1% { opacity: 1; }
+				
+				20% { opacity: 1; }
+				22% { opacity: 0; }
+
+				100% { opacity: 0; }
+			}
+			#feature-image-1 { animation: featureImgContainerLoop 35s ease-in-out infinite; animation-delay: 0s; } 
+			#feature-image-2 { animation: featureImgContainerLoop 35s ease-in-out infinite; animation-delay: -28s; } 
+			#feature-image-3 { animation: featureImgContainerLoop 35s ease-in-out infinite; animation-delay: -21s; } 
+			#feature-image-4 { animation: featureImgContainerLoop 35s ease-in-out infinite; animation-delay: -14s; }
+			#feature-image-5 { animation: featureImgContainerLoop 35s ease-in-out infinite; animation-delay: -7s; }
+
+			.feature-image {
+				opacity: 1;
+				position: absolute;
+				top: 0;
+				right: 0;
+				max-width: 75%;
+				width: 100%;
+				height: 100%;
+				border-radius: 30px;
+				object-fit: cover;
+				object-position: center;
+			}
+    </style>
 </head>
 <body>
 	<!-- NAVBAR -->
@@ -702,13 +858,83 @@
 		</div>
 	</div>
 
+
+	<!-- PURPOSE SECTION -->
+	<div class="section-wrapper section-top-line section-bottom-line">
+		<div class="section-container"> 
+			<div class="feature-wrapper">
+
+
+				<div class="feature-container">
+					<div class="feature-text-wrapper">
+
+						<div class="feature-title-wrapper">
+							<h4>The Future Building of Victory Dumaguete</h4>
+						</div>
+
+
+						<div class="feature-text-container" id="feature-1">
+							<h5>Assembly Hall</h5>
+							<p>for worship services, conferences and seminars.</p>
+							<div class="feature-progress-bar-container" id="feature-bar-container-1">
+								<div class="feature-progress-bar" id="feature-bar-1"></div>
+							</div>
+						</div>
+						<div class="feature-text-container" id="feature-2">
+							<h5>Multi-purpose rooms and band room</h5>
+							<p>for discipleship, leadership development and collaboration.</p>
+							<div class="feature-progress-bar-container" id="feature-bar-container-2">
+								<div class="feature-progress-bar" id="feature-bar-2"></div>
+							</div>
+						</div>
+						<div class="feature-text-container" id="feature-3">
+							<h5>Basketball court and roof deck activity area</h5>
+							<p>for discipleship and to engage students.</p>
+							<div class="feature-progress-bar-container" id="feature-bar-container-3">
+								<div class="feature-progress-bar" id="feature-bar-3"></div>
+							</div>
+						</div>
+						<div class="feature-text-container" id="feature-4">
+							<h5>Student lounges</h5>
+							<p>and areas where students can meet, hang out, or study</p>
+							<div class="feature-progress-bar-container" id="feature-bar-container-4">
+								<div class="feature-progress-bar" id="feature-bar-4"></div>
+							</div>
+						</div>
+						<div class="feature-text-container" id="feature-5">
+							<h5>Offices</h5>
+							<p>for Victory Dumaguete Staff</p>
+							<div class="feature-progress-bar-container" id="feature-bar-container-5">
+								<div class="feature-progress-bar" id="feature-bar-5"></div>
+							</div>
+						</div>
+						
+					</div>
+					<div> </div>
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182936/20240426_MH_B01.jpg" id="feature-image-1">
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182551/Unknown.jpg" id="feature-image-2">
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182690/Unknown-3.png" id="feature-image-3">
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182689/Unknown-4.jpg" id="feature-image-4">
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182688/Unknown-2.jpg" id="feature-image-5">
+
+				</div>
+			</div>
+ 
+		</div>
+
+		<div class="section-line-wrapper">
+			<div class="section-line-container">
+				<div class="section-line-solid"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-solid"></div>
+			</div>
+		</div>
+	</div>
 	<div style="height: 1000px;"></div>
 
     <!-- JavaScript -->
-
-
-
-
 
 	<!-- ========== NAVBAR SCRIPT ========== -->
 	<script>
