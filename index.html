@@ -258,22 +258,22 @@
 
 			@keyframes hookSlideLoop {
 				/* First Frame - Stay at */
-				0%, 24.11% { transform: translateX(-75%) scale(0.45); opacity: 1; z-index: 0;}
+				0%, 24.11% { transform: translateX(-75%) scale(0.45); filter: blur(10px); opacity: 1; z-index: 0;}
 				/* Transition to Second Frame*/
-				25.89% { transform: translateX(75%) scale(0.45); opacity: 0; z-index: 0;}
+				25.89% { transform: translateX(75%) scale(0.45); filter: blur(10px); opacity: 0; z-index: 0;}
 				/* Second Frame - Stay at*/
-				49.11% { transform: translateX(75%) scale(0.45); opacity: 0; z-index: 0;}
+				49.11% { transform: translateX(75%) scale(0.45); filter: blur(10px); opacity: 0; z-index: 0;}
 				
 				/* Transition to Third Frame (75%) */
-				50.89% { transform: translateX(75%) scale(0.45); opacity: 1; z-index: 0;}
+				50.89% { transform: translateX(75%) scale(0.45); filter: blur(10px); opacity: 1; z-index: 0;}
 				/* Third Frame - Stay at (75%) */
-				74.11% { transform: translateX(75%) scale(0.45); opacity: 1; z-index: 0;}
+				74.11% { transform: translateX(75%) scale(0.45); filter: blur(10px); opacity: 1; z-index: 0;}
 				/* Transition to Fourth Frame (75%, fade out) */
-				75.89% { transform: translateX(0%) scale(1); opacity: 1; z-index: 0;}
+				75.89% { transform: translateX(0%) scale(1); filter: blur(0px); opacity: 1; z-index: 1;}
 				/* Fourth Frame - Stay invisible */
-				99.11% { transform: translateX(0%) scale(1); opacity: 1; z-index: 0;}
+				99.11% { transform: translateX(0%) scale(1); filter: blur(0px); opacity: 1; z-index: 1;}
 				/* Reset to First Frame */
-				100% { transform: translateX(-75%) scale(0.45); opacity: 1; z-index: 1;}
+				100% { transform: translateX(-75%) scale(0.45); filter: blur(10px); opacity: 1; z-index: 1;}
 			}
 			.hook-carousel-img-container#hook-carousel-1 {
 				animation: hookSlideLoop 28s ease-in-out infinite;
