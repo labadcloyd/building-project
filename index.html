@@ -689,6 +689,35 @@
 				-moz-box-shadow: 6px 6px 20px 0px rgba(0,0,0,0.40);
 			}
     </style>
+
+
+		<!-- ========== CTA SECTION STYLES ========== -->
+    <style>
+			.light-cyan-bg {
+				background-color: #F5FBFF;
+			}
+			.cta-container {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				padding: 80px 0;
+				width: 100%;
+			}
+			.cta-text-wrapper {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				text-align: center;
+				gap: 15px;
+			}
+			.cta-text-wrapper h2 { margin-bottom: 15px; font-size: 3rem;}
+			.cta-text-wrapper p { max-width: 750px; }
+			.cta-text-wrapper button { margin-top: 20px; padding: 10px 45px;}
+			.cta-text-wrapper span { color: #2380BF;}
+		</style>
 </head>
 <body>
 	<!-- NAVBAR -->
@@ -749,6 +778,7 @@
 			</div>
 		</div>
 	</div>
+
 
 	<!-- HOOK SECTION -->
 	<div class="section-wrapper section-top-line section-bottom-line">
@@ -851,7 +881,7 @@
  
 		</div>
 
-		<div class="section-line-wrapper">
+		<div class="section-line-wrapper" style="z-index: 1;">
 			<div class="section-line-container">
 				<div class="section-line-solid"></div>
 				<div class="section-line-dashed"></div>
@@ -863,7 +893,7 @@
 	</div>
 
 
-	<!-- PURPOSE SECTION -->
+	<!-- FEATURE SECTION -->
 	<div class="section-wrapper section-top-line section-bottom-line">
 		<div class="section-container"> 
 			<div class="feature-wrapper">
@@ -936,7 +966,31 @@
 			</div>
 		</div>
 	</div>
-	<div style="height: 1000px;"></div>
+
+
+	<!-- CTA SECTION -->
+	<div class="section-wrapper section-top-line section-bottom-line light-cyan-bg">
+		<div class="section-container"> 
+			<div class="cta-container">
+				<div class="cta-text-wrapper">
+					<h2>Together, Let's Advance <span>God's Kingdom</span></h2>
+					<p>On March next year, as we celebrate our 25th year anniversarry, our faith is that we will see this building come into its completion. Looking ahead to the next 25 years and beyond, this facility will be a catalysi for leadership development, apostolic leadership, and global missions</p>
+					
+					<a><button>GIVE TO THE BUILDING</button></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="section-line-wrapper" style="z-index: 1;"> 
+			<div class="section-line-container">
+				<div class="section-line-solid"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-solid"></div>
+			</div>
+		</div>
+	</div>
 
     <!-- JavaScript -->
 
