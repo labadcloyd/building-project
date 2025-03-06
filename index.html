@@ -98,6 +98,7 @@
 					align-items: center;
 					width: 100%;
 					min-height: 600px;
+					padding: 0 16px;
 					position: relative;
 				}
 				.section-container {
@@ -118,6 +119,7 @@
 					top: 0;
 					left: 0;
 					z-index: -1;
+					padding: 0 16px;
 				}
 				.section-line-container {
 					display: flex;
@@ -501,7 +503,7 @@
 				background-image: url('https://res.cloudinary.com/dzpphtqox/image/upload/v1741025615/Building%20Projects/Lines.png');
 				background-repeat: no-repeat;
 				background-position: center;
-				background-size: contain;
+				background-size: cover;
 			}
 			.purpose-wrapper img {
 				max-width: 48%;
@@ -718,6 +720,44 @@
 			.cta-text-wrapper button { margin-top: 20px; padding: 10px 45px;}
 			.cta-text-wrapper span { color: #2380BF;}
 		</style>
+
+
+		<!-- ========== FOOTER SECTION STYLES ========== -->
+    <style>
+			.footer {
+				min-height: fit-content;
+				box-shadow: 0 0 25px 0px rgba(0,0,0,0.02);
+				-webkit-box-shadow: 0 0 25px 0px rgba(0,0,0,0.02);
+				-moz-box-shadow: 0 0 25px 0px rgba(0,0,0,0.02);
+			}
+			.footer p {
+				font-size: 14px;
+			}
+			.footer-row-wrapper {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+			}
+			.footer-row-container {
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+				padding: 20px;
+				gap: 15px;
+			}
+			.footer-col-container {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+			.footer-copyright-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 20px 0;
+				background-color: #fff;
+			}
+		</style>
 </head>
 <body>
 	<!-- NAVBAR -->
@@ -781,7 +821,7 @@
 
 
 	<!-- HOOK SECTION -->
-	<div class="section-wrapper section-top-line section-bottom-line">
+	<div class="section-wrapper section-top-line">
 		<div class="section-container"> 
 			<div class="hook-container">
 				<div class="hook-text-wrapper">
@@ -867,7 +907,7 @@
 
 
 	<!-- PURPOSE SECTION -->
-	<div class="section-wrapper section-top-line section-bottom-line gd-bg-section">
+	<div class="section-wrapper">
 		<div class="section-container"> 
 			<div class="purpose-wrapper">
 				<div class="purpose-text-wrapper">
@@ -881,7 +921,7 @@
  
 		</div>
 
-		<div class="section-line-wrapper" style="z-index: 1;">
+		<div class="section-line-wrapper gd-bg-section">
 			<div class="section-line-container">
 				<div class="section-line-solid"></div>
 				<div class="section-line-dashed"></div>
@@ -894,7 +934,7 @@
 
 
 	<!-- FEATURE SECTION -->
-	<div class="section-wrapper section-top-line section-bottom-line">
+	<div class="section-wrapper section-bottom-line">
 		<div class="section-container"> 
 			<div class="feature-wrapper">
 
@@ -969,7 +1009,7 @@
 
 
 	<!-- CTA SECTION -->
-	<div class="section-wrapper section-top-line section-bottom-line light-cyan-bg">
+	<div class="section-wrapper">
 		<div class="section-container"> 
 			<div class="cta-container">
 				<div class="cta-text-wrapper">
@@ -981,7 +1021,77 @@
 			</div>
 		</div>
 
-		<div class="section-line-wrapper" style="z-index: 1;"> 
+		<div class="section-line-wrapper light-cyan-bg"> 
+			<div class="section-line-container">
+				<div class="section-line-solid"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-solid"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- FOOTER SECTION -->
+	<div class="section-wrapper footer">
+		<div class="section-container"> 
+			<div class="footer-row-wrapper">
+				<div class="footer-row-container">
+					<div>
+						<h5>Victory Dumaguete</h5>
+						<p><i>Honor God. Make Disciples.</i></p>
+					</div>
+				</div>
+				<div class="footer-row-container">
+					<p><b>Address:</b> Dumaguete Business Park, Calindagan, Dumaguete City 6200, Negros Oriental, Philippines</p>
+					<div>
+						<p><b>Phone:</b> +63 35 402 0531</p>
+						<p><b>Email:</b> dumaguete@victory.org.ph</p>
+					</div>
+				</div>
+				<div class="footer-row-container">
+					<div class="footer-col-container">
+						<a><p>Home</p></a>
+						<a><p>About</p></a>
+						<a><p>Building Project</p></a>
+						<a><p>Get Connected</p></a>
+						<a><p>Events</p></a>
+						<a><p>Pastoral Care</p></a>
+						<a><p>Podcast</p></a>
+					</div>
+				</div>
+				<div class="footer-row-container">
+					<div class="footer-col-container">
+						<a><p>Facebook</p></a>
+						<a><p>Instagram</p></a>
+						<a><p>Twitter</p></a>
+						<a><p>Spotify</p></a>
+						<a><p>Youtube</p></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section-line-wrapper"> 
+			<div class="section-line-container">
+				<div class="section-line-solid"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-dashed"></div>
+				<div class="section-line-solid"></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="section-wrapper footer section-top-line">
+		<div class="section-container"> 
+		<div class="footer-copyright-container">
+			<p>© 2025 Victory Dumaguete. All Rights Reserved</p>
+		</div>
+		</div>
+
+		<div class="section-line-wrapper"> 
 			<div class="section-line-container">
 				<div class="section-line-solid"></div>
 				<div class="section-line-dashed"></div>
