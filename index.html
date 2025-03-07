@@ -165,7 +165,7 @@
 				position: relative;
 				max-width: 1280px;
 				width: 100%;
-				padding: 20px 0;
+				padding: 20px;
 			}
 			nav .menu-container {
 				display: flex;
@@ -173,11 +173,18 @@
 				gap: 40px;
 			}
 			nav a{ color: #fff; font-weight: 100; font-size: 14px; }
-			nav .nav-title { position: absolute; left: 0; top: 0; height: 52px; display: flex; align-items: center; gap: 15px; }
+			nav .nav-title { position: absolute; left: 20px; top: 0; height: 52px; display: flex; align-items: center; gap: 15px; }
 			nav .nav-title img { object-fit: contain; }
 			nav .nav-title > div { display: flex; flex-direction: column; gap: 3px;}
 			nav .nav-title > div span { font-size: 14px; font-weight: 200; color: #fff; } 
-			nav .nav-btn { position: absolute; right: 0; top: 0; height: 52px; display: flex; flex-direction: column; justify-content: center;}
+			nav .nav-btn { position: absolute; right: 20px; top: 0; height: 52px; display: flex; flex-direction: column; justify-content: center;}
+			nav .nav-btn button { padding: 6px 30px; }
+			
+			@media only screen and (max-width: 1200px) { nav .menu-container { gap: 20px } }
+			@media only screen and (max-width: 1000px) {
+				.menu-container { display: none !important; }
+				.nav-btn { display: none !important; }
+			}
     </style>
 
 		<!-- ========== HERO SECTION STYLES ========== -->
@@ -387,7 +394,7 @@
 
 			#hook-content-progress-1 h5{ animation: hookSlideLoopContent 28s ease-in-out 0s infinite; } 
 			#hook-content-progress-2 h5{ animation: hookSlideLoopContent 28s ease-in-out -21s infinite; } 
-			#hook-content-progress-3 h5{ animation: hookSlideLoopContent 28s ease-in-out -14 infinite; } 
+			#hook-content-progress-3 h5{ animation: hookSlideLoopContent 28s ease-in-out -14s infinite; } 
 			#hook-content-progress-4 h5{ animation: hookSlideLoopContent 28s ease-in-out -7s infinite; }
 
 			@keyframes hookSlideLoopBarContainer {
@@ -736,13 +743,31 @@
 				<a href="https://victorydumaguete.org/contact">Contact</a>
 			</div>
 
-
 			<div class="nav-btn">
 				<a href="https://links.victorydumaguete.org/widget/form/iBfh4Zwnhu2TQdEt7344?notrack=true">
-					<button class="tertiary">GIVE</button>
+					<button class="secondary">GIVE</button>
 				</a>
 			</div>
 		</div>
+
+		<!-- <div class="nav-container-resp">
+
+			<div class="hamburger-container">
+				<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M3 7H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+					<path d="M3 12H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+					<path d="M3 17H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+				</svg>
+			</div>
+
+			<div class="close-container">
+				<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M3 7H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+					<path d="M3 12H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+					<path d="M3 17H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+				</svg>
+			</div>
+		</div> -->
 	</nav>
 
 	<!-- HERO SECTION -->
