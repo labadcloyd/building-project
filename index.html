@@ -428,9 +428,9 @@
 				left: 0;
 				border-radius: 20px;
 				background: rgb(35,128,191);
-				background: -moz-linear-gradient(180deg, rgba(35,128,191,0) 35%, rgba(35,128,191,0.9) 80%);
-				background: -webkit-linear-gradient(180deg, rgba(35,128,191,0) 35%, rgba(35,128,191,0.9) 80%);
-				background: linear-gradient(180deg, rgba(35,128,191,0) 35%, rgba(35,128,191,0.9) 80%);
+				background: -moz-linear-gradient(180deg, rgba(35,128,191,0) 15%, rgba(35,128,191,0.7) 80%);
+				background: -webkit-linear-gradient(180deg, rgba(35,128,191,0) 15%, rgba(35,128,191,0.7) 80%);
+				background: linear-gradient(180deg, rgba(35,128,191,0) 15%, rgba(35,128,191,0.7) 80%);
 				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2380bf",endColorstr="#2380bf",GradientType=1);
 
 				padding: 180px 20px 20px 20px;
@@ -443,7 +443,7 @@
 				color: #fff;
 				overflow: hidden;
 				transition: max-height 0.3s ease, opacity 0.3s ease;
-				max-height: 100px;
+				max-height: 200px;
 			}
 			.hook-carousel-img-container span {
 				color: #fff;
@@ -456,7 +456,7 @@
 			.hook-carousel-img-container:hover span {
 				height: fit-content;
 				opacity: 1;
-				max-height: 100px;
+				max-height: 200px;
 			}
 			@keyframes hookSlideLoopFG {
 				0% { opacity: 0; }
@@ -593,13 +593,33 @@
 				.hook-carousel-img-container { width: 100%; height: 400px;}
 				.hook-content-container {display: none;}
 				.hook-carousel-img-placeholder {width: 100%; height: 400px;}
-				.hook-carousel-img-container span { opacity: 1; max-height: 100px; }
+				.hook-carousel-img-container span { opacity: 1; max-height: 200px; }
 				.hook-carousel-wrapper { margin-bottom: 30px; }
 
 				.hook-content-wrapper {padding: 0 10px 80px 10px;}
 				.hook-progress-bar-container-resp {display: block;}
 				.hook-progress-bar-container {height: 6px; width: 22%; background-color: #2381bf00;}
 				.hook-progress-bar {height: 6px;}
+
+				.hook-carousel-img-fg {
+					width: 100%;
+					height: fit-content;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					border-radius: 20px;
+					background: rgb(35,128,191);
+					background: -moz-linear-gradient(180deg, rgba(35,128,191,0) 15%, rgba(35,128,191,0.7) 70%);
+					background: -webkit-linear-gradient(180deg, rgba(35,128,191,0) 15%, rgba(35,128,191,0.7) 70%);
+					background: linear-gradient(180deg, rgba(35,128,191,0) 15%, rgba(35,128,191,0.7) 70%);
+					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2380bf",endColorstr="#2380bf",GradientType=1);
+
+					padding: 180px 20px 20px 20px;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-end;
+					color: #fff !important;
+				}
 
 				@keyframes hookSlideLoopBarContainer {
 					0%, 24% { transform: translateX(12%);}
@@ -661,16 +681,20 @@
 				align-items: flex-start;
 				width: 100%;
 				text-align: left;
-				gap: 15px;
+				gap: 20px;
 				padding: 0 20px;
 			}
-			.purpose-text-wrapper h2 { margin-bottom: 15px; color: #fff }
-			.purpose-text-wrapper p { max-width: 750px;  color: #fff }
-			.purpose-text-wrapper button { margin-top: 20px; padding: 10px 45px; color: #fff }
+			.purpose-text-wrapper h2 { margin-bottom: 0px; color: #fff }
+			.purpose-text-wrapper p { max-width: 750px;  color: #fff } 
 			.purpose-text-wrapper span { color: #2380BF;}
 
+
+			@media only screen and (min-width: 1000px) { 
+				.purpose-wrapper img { width: 100%; min-height: 450px; object-fit: cover;}
+			}
+
 			@media only screen and (max-width: 1000px) { 
-				.purpose-wrapper { flex-direction: column; gap: 80px; padding: 120px 0;}
+				.purpose-wrapper { flex-direction: column-reverse; gap: 40px; padding: 120px 0;}
 				.purpose-wrapper img { max-width: 100%; }
 			}
 			@media only screen and (max-width: 500px) { 
@@ -851,6 +875,8 @@
 				.feature-container {flex-direction: column-reverse; gap: 40px;}
 				.feature-text-wrapper {max-width: 100%; display: grid; grid-template-columns: 1fr 1fr;}
 				.feature-title-wrapper {border-bottom: 1px dashed rgba(53, 68, 71, 0.10);}
+				/* Should be removed if title is placed back */
+				.feature-text-container#feature-2 {border-top: 1px dashed rgba(53, 68, 71, 0.10);}
 			}
 			@media only screen and (max-width: 500px) {
 				.feature-text-wrapper {grid-template-columns: 1fr;}
@@ -1141,7 +1167,7 @@
 					<div class="hook-carousel-img-container" id="hook-carousel-2">
 						<div class="hook-carousel-img-fg" id="hook-carousel-fg-2">
 							<p><b>From Local to Global.</b></p>
-							<span>With over 300 international students from 50+ countries coming to our city each year, we are committed to engaging, equipping, and empowering them to be a blessing to their home nations.</span>
+							<span>We are committed to engaging, equipping, and empowering international students from 50+ countries to be a blessing to their home nations.</span>
 						</div>
 						<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741054244/Building%20Projects/476809431_1071594208339140_2129658794575671217_n.jpg">
 					</div>
@@ -1149,7 +1175,7 @@
 					<div class="hook-carousel-img-container" id="hook-carousel-3">
 						<div class="hook-carousel-img-fg" id="hook-carousel-fg-3">
 							<p><b>Change a LIFE. Change the Nation.</b></p>
-							<span>We partner with Real LIFE Foundation to empower underprivileged youth through scholarships, mentorship, and leadership development, equipping them to grow in faith, excel academically, and fulfill their God-given potential.</span>
+							<span>We partner with Real LIFE Foundation to empower underprivileged youth through scholarships, mentorship, and leadership development, equipping them to grow in faith and fulfill their potential.</span>
 						</div>
 						<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741030651/Building%20Projects/476912434_1071594211672473_526760610120245937_n_1.png">
 					</div>
@@ -1216,9 +1242,12 @@
 		<div class="section-container"> 
 			<div class="purpose-wrapper">
 				<div class="purpose-text-wrapper">
-					<h2>Dumaguete City, A Thriving Student Hub</h2>
+					<h2>From Local to Global</h2>
 					<p>Dumaguete City, a thriving student hub with 15,000 to 20,000 students, is a gathering place for future leaders from across the nation and the world. As they make this city their home, we have the privilege and responsibility to equip them—not just for campus life, but for the greater mission of bringing the gospel to their communities and nations. </p>
 					<p>By investing in the next generation, we are raising leaders and campus missionaries, and to advance this vision, we are building a church facility as a hub for discipleship and leadership development.</p>
+					<a href="https://links.victorydumaguete.org/widget/form/iBfh4Zwnhu2TQdEt7344?notrack=true">
+						<button class="secondary">BE PART OF THE VISION</button>
+					</a>
 				</div>
 				<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741442270/VICTORY_1A_smaller_t8iht8.jpg">
 			</div>
@@ -1246,9 +1275,9 @@
 				<div class="feature-container">
 					<div class="feature-text-wrapper">
 
-						<div class="feature-title-wrapper">
+						<!-- <div class="feature-title-wrapper">
 							<h5>The Future Building of Victory Dumaguete</h5>
-						</div>
+						</div> -->
 
 
 						<div class="feature-text-container" id="feature-1">
@@ -1259,22 +1288,22 @@
 							</div>
 						</div>
 						<div class="feature-text-container" id="feature-2">
-							<h5>Multi-purpose rooms and band room</h5>
-							<p>for discipleship, leadership development and collaboration.</p>
+							<h5>Training Rooms</h5>
+							<p>to develop more leaders in different sectors of society.</p>
 							<div class="feature-progress-bar-container" id="feature-bar-container-2">
 								<div class="feature-progress-bar" id="feature-bar-2"></div>
 							</div>
 						</div>
 						<div class="feature-text-container" id="feature-3">
-							<h5>Basketball court and roof deck activity area</h5>
-							<p>for discipleship and to engage students.</p>
+							<h5>Roof Deck</h5>
+							<p>for discipleship, fellowship, and engaging students.</p>
 							<div class="feature-progress-bar-container" id="feature-bar-container-3">
 								<div class="feature-progress-bar" id="feature-bar-3"></div>
 							</div>
 						</div>
 						<div class="feature-text-container" id="feature-4">
 							<h5>Student lounges</h5>
-							<p>and areas where students can meet, hang out, or study</p>
+							<p>where students can meet, hang out, or study</p>
 							<div class="feature-progress-bar-container" id="feature-bar-container-4">
 								<div class="feature-progress-bar" id="feature-bar-4"></div>
 							</div>
