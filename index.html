@@ -921,6 +921,23 @@
 				padding: 20px 0;
 				background-color: #fff;
 			}
+
+			@media only screen and (max-width: 760px) {
+				.footer-row-wrapper {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+				}
+				.footer-row-container:first-child {border-bottom: 1px dashed rgba(53, 68, 71, 0.10);}
+				.footer-row-container:nth-child(2) {border-bottom: 1px dashed rgba(53, 68, 71, 0.10);}
+			}
+
+			@media only screen and (max-width: 500px) {
+				.footer-row-wrapper {
+					display: grid;
+					grid-template-columns: 1fr;
+				}
+				.footer-row-container {border-bottom: 1px dashed rgba(53, 68, 71, 0.10);}
+			}
 		</style>
 </head>
 <body>
