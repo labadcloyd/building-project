@@ -152,7 +152,7 @@
 				top: 0;
 				left: 0;
 				width: 100%;
-				z-index: 10;
+				z-index: 5;
 				
 				display: flex;
 				justify-content: center;
@@ -179,11 +179,31 @@
 			nav .nav-title > div span { font-size: 14px; font-weight: 200; color: #fff; } 
 			nav .nav-btn { position: absolute; right: 20px; top: 0; height: 52px; display: flex; flex-direction: column; justify-content: center;}
 			nav .nav-btn button { padding: 6px 30px; }
+			nav .close-container { display: none; cursor: pointer; transition: 0.3s;}
+			nav .hamburger-container { display: none; cursor: pointer; transition: 0.3s;}
+			nav .close-container:hover { transform: scale(1.1);}
+			nav .hamburger-container:hover { transform: scale(1.1);}
+
+			nav .nav-container-resp { transition: .3s; opacity: 0; display: none; flex-direction: column; justify-content: flex-start; align-items: flex-start; position: fixed; gap: 20px; z-index: 6; top: 0; left: 0; height: 100vh; width: 100vw; background-color: #fff; padding: 20px; }
+			nav .nav-container-resp-row { display: flex; justify-content: space-between; align-items: flex-start; width: 100%; transition: .3s; }
+			nav .nav-title.blue {position: relative; left: 0; margin-bottom: 20px;}
+			nav .nav-container-resp-row a{ transition: .3s;}
+			nav .nav-container-resp-row a:hover {color: #2380BF; font-weight: 600;}
+			nav .nav-container-resp-row a svg path { transition: .3s; }
+			nav .nav-container-resp-row a:hover svg path { stroke-width: 1.5px; stroke: #2380BF; }
+
 			
 			@media only screen and (max-width: 1200px) { nav .menu-container { gap: 20px } }
+			/* Ipad */
 			@media only screen and (max-width: 1000px) {
 				.menu-container { display: none !important; }
 				.nav-btn { display: none !important; }
+				nav .nav-container { justify-content: space-between; align-items: center; padding: 4px 20px;}
+				nav .hamburger-container { display: block; }
+				nav a{ color: #354447; font-weight: 100; font-size: 1rem; width: 100%; display: flex; justify-content: space-between; align-items: center;}
+				nav .nav-title { position: relative; }
+				nav .nav-title.blue span {color: #2380BF; font-size: 1.15rem;}
+				nav .nav-title.blue img { max-height: 40px; }
 			}
     </style>
 
@@ -748,26 +768,116 @@
 					<button class="secondary">GIVE</button>
 				</a>
 			</div>
+
+
+			<div class="hamburger-container" onclick="openNav(1)">
+				<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M3 7H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+					<path d="M3 12H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+					<path d="M3 17H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+				</svg>
+			</div>
+
 		</div>
+		<div class="nav-container-resp">
+			<div class="nav-container-resp-row">
+				<div class="nav-title blue">
+					<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741397912/Building%20Projects/logolargeblue.png">
+					<div>
+						<span>Victory</span>
+						<span><b>Dumaguete</b></span>
+					</div>
+				</div>
 
-		<!-- <div class="nav-container-resp">
-
-			<div class="hamburger-container">
-				<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M3 7H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-					<path d="M3 12H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-					<path d="M3 17H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-				</svg>
+				<div class="close-container" onclick="openNav(2)">
+					<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#354447" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M9.16998 14.83L14.83 9.17004" stroke="#354447" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M14.83 14.83L9.16998 9.17004" stroke="#354447" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</div>
 			</div>
 
-			<div class="close-container">
-				<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M3 7H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-					<path d="M3 12H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-					<path d="M3 17H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-				</svg>
+			<div class="nav-container-resp-row">
+				<a href="https://victorydumaguete.org/">
+					Home
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M10.74 15.53L14.26 12L10.74 8.46997" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
 			</div>
-		</div> -->
+			<div class="nav-container-resp-row">
+				<a href="https://victorydumaguete.org/about-us">
+					About
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M10.74 15.53L14.26 12L10.74 8.46997" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+			</div>
+			<div class="nav-container-resp-row">
+				<a href="https://victorydumaguete.org/project">
+					<b>Building Project</b>
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M10.74 15.53L14.26 12L10.74 8.46997" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+			</div>
+			<div class="nav-container-resp-row">
+				<a href="https://events.victorydumaguete.org/join-a-victory-group?fbclid=IwY2xjawEtGvRleHRuA2FlbQIxMAABHbR9SXV9zmcZtQRV5ZAT3suTQXm7EkJ3gs78DE8W8_8GQ1tRXz4Ie1W1fQ_aem_cUYC5YWKCSrXHo-H5QyFAw">
+					Get Connected
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M10.74 15.53L14.26 12L10.74 8.46997" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+			</div>
+			<div class="nav-container-resp-row">
+				<a href="https://events.victorydumaguete.org/?fbclid=IwY2xjawEtGopleHRuA2FlbQIxMAABHS-xoNYYiAZ55L8-JJrEe9393ocUDz6NEbPFqDRH5SIKV-8NcoDo1-FvoQ_aem_vjHsVKYY3vdIALONu5esPg">
+					Events
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M10.74 15.53L14.26 12L10.74 8.46997" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+			</div>
+			<div class="nav-container-resp-row">
+				<a href="https://home.victorydumaguete.org/pastoralcare">
+					Pastoral Care
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M10.74 15.53L14.26 12L10.74 8.46997" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+			</div>
+			<div class="nav-container-resp-row">
+				<a href="https://victorydumaguete.org/podcast">
+					Podcast
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M10.74 15.53L14.26 12L10.74 8.46997" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+			</div>
+			<div class="nav-container-resp-row">
+				<a href="https://victorydumaguete.org/contact">
+					Contact
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M10.74 15.53L14.26 12L10.74 8.46997" stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+			</div>
+
+			<div class="nav-container-resp-row" style="margin-top: 20px;"> 
+				<a href="https://links.victorydumaguete.org/widget/form/iBfh4Zwnhu2TQdEt7344?notrack=true">
+					<button class="primary">GIVE</button>
+				</a>
+			</div>
+				
+		</div>
 	</nav>
 
 	<!-- HERO SECTION -->
@@ -1133,6 +1243,39 @@
 		// Run once on page load to set the correct navbar state
 		handleScroll();
 	});
+
+		
+		var hamburgerContainer = document.querySelector(".hamburger-container")
+		var closeContainer = document.querySelector(".close-container")
+		var navContainerResp = document.querySelector(".nav-container-resp")
+
+    function hideNav(){
+			var w = document.documentElement.clientWidth;
+			if (w >= 1000) {
+				closeContainer.style.display = 'none'
+				navContainerResp.style.display = 'none'
+				navContainerResp.style.opacity = '0'
+			}
+		}
+		window.addEventListener("resize", hideNav);
+
+
+		function openNav(index) {
+			if (index === 1) { 
+				closeContainer.style.display = 'block'
+				navContainerResp.style.display = 'flex'
+				setTimeout(() => {
+					navContainerResp.style.opacity = '1'
+				}, 100)
+			}
+			if (index === 2) {
+				closeContainer.style.display = 'none'
+				navContainerResp.style.opacity = '0'
+				setTimeout(() => {
+					navContainerResp.style.display = 'none'
+				}, 300)
+			}
+		}
 	</script>
 
 	<!-- ========== HOOK SCRIPT ========== -->
