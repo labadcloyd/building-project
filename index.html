@@ -241,6 +241,41 @@
 				width: 100%;
 				height: 100%;
 			}
+			.hero-section .bg-container img{object-fit: contain !important; width: 100%; object-position: center;}
+			#heroImgSmall {display: none;}
+
+
+			/* Ipad */
+			@media only screen and (max-width: 1000px) {
+				h1 {font-size: 5rem;}
+				h3 {font-size: 1.5rem;} 
+				.hero-section button{ margin-top: 0.2rem;}
+				.hero-section img { margin-top: -80px; }
+			}
+			@media only screen and (max-width: 700px) {
+				h1 {font-size: 3.5rem;}
+				h3 {font-size: 1.5rem; margin-bottom: -10px !important;} 
+				.hero-section button{ margin-top: 0.5rem;}
+				.hero-section img { margin-top: -20px; }
+			}
+			@media only screen and (max-width: 700px) {
+				h1 {font-size: 3rem;}
+				h3 {font-size: 1.25rem; margin-bottom: -5px !important; margin-top: 20px !important;} 
+				.hero-section button{ margin-top: 0.5rem;}
+				.hero-section img { margin-top: 20px; }
+				.hero-section-title-wrapper {justify-content: center; align-items: center;}
+				#heroImgSmall {display: block;}
+				#heroImgLarge {display: none;}
+				
+				.hero-section .bg-container img{margin-top: 90px;}
+				.blue-gradiant-bg {
+					background: rgb(14,92,145);
+					background: -moz-linear-gradient(0deg, rgba(14,92,145,0) 20%, rgba(14,92,145,1) 100%);
+					background: -webkit-linear-gradient(0deg, rgba(14,92,145,0) 20%, rgba(14,92,145,1) 100%);
+					background: linear-gradient(0deg, rgba(14,92,145,0) 20%, rgba(14,92,145,1) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e5c91",endColorstr="#0e5c91",GradientType=1);
+				}
+			}
     </style>
 
 		<!-- ========== HOOK SECTION STYLES ========== -->
@@ -892,7 +927,8 @@
 						<button class="secondary">BE PART OF THE VISION</button>
 					</a>
 				</div>
-				<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741403717/VICTORY_final_last_yz4lal.png"> 
+				<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741403717/VICTORY_final_last_yz4lal.png" id="heroImgLarge">
+				<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741406076/VICTORY_1_full_small_last_ztcjk6.png" id="heroImgSmall">
 				<div class="bg-container">
 					<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741025998/Building%20Projects/world-map-silhouette-global-mapping-in-the-digital-age-illustration-png-2_1.png">
 				</div>
