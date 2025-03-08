@@ -637,14 +637,10 @@
 				gap: 20px;
 				padding: 180px 0;
 				width: 100%;
-				background-image: url('https://res.cloudinary.com/dzpphtqox/image/upload/v1741025615/Building%20Projects/Lines.png');
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: cover;
 			}
 			.purpose-wrapper img {
 				max-width: 48%;
-				border-radius: 30px;
+				border-radius: 20px;
 			}
 			.gd-bg-section {
 				background: rgb(16,60,89);
@@ -668,6 +664,10 @@
 			.purpose-text-wrapper button { margin-top: 20px; padding: 10px 45px; color: #fff }
 			.purpose-text-wrapper span { color: #2380BF;}
 
+			@media only screen and (max-width: 1000px) { 
+				.purpose-wrapper { flex-direction: column; gap: 80px; padding: 120px 0;}
+				.purpose-wrapper img { max-width: 100%; }
+			}
     </style>
 
 		<!-- ========== FEATURES SECTION STYLES ========== -->
