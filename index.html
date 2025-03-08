@@ -247,8 +247,9 @@
 			}
 			.hero-section-title-wrapper { display: flex; flex-direction: column; gap: 0; padding: 0 40px; z-index: 3;}
 			.hero-section h1{ font-weight: bold; color: #fff; }
-			.hero-section h3{ margin-top: 20px; margin-bottom: -20px; font-weight: 200; color: #fff; }
-			.hero-section button{ margin-top: .2rem;}
+			.hero-section h3{ margin-top: 20px; margin-bottom: -30px; font-weight: 200; color: #fff; font-size: 2.7rem;}
+			.hero-section p{ font-weight: 200; margin-left: 5px; margin-top: -20px; margin-bottom: 20px; color: #fff; font-size: 1.5rem; }
+			.hero-section button{ margin-top: 0.5rem; font-size: 1.1rem; border-radius: 10px; padding: 10px 50px;}
 			.hero-section img{ margin-top: -150px; z-index: 1;}
 			.hero-section .bg-container {
 				position: absolute;
@@ -271,8 +272,9 @@
 			@media only screen and (max-width: 1000px) {
 				.hero-section { padding: 100px 0 60px 0; justify-content: flex-start;}
 				.hero-section h1 {font-size: 5rem;}
-				.hero-section h3 {font-size: 1.5rem;} 
-				.hero-section button{ margin-top: 0.2rem;}
+				.hero-section h3 {font-size: 2.4rem; margin-bottom: -20px; }
+				.hero-section p{ font-size: 1.3rem; margin-top: -10px;}
+				.hero-section button{ margin-top: 0.2rem; font-size: 1rem;}
 				.hero-section img { margin-top: -60px; }
 
 				.hero-section .bg-container img{
@@ -291,7 +293,9 @@
 			@media only screen and (max-width: 760px) {
 				.hero-section { padding: 120px 0 60px 0;  justify-content: flex-start;}
 				.hero-section h1 {font-size: 3.5rem;}
-				.hero-section h3 {font-size: 1.5rem; margin-bottom: -10px !important;} 
+				.hero-section h3 {font-size: 1.7rem; margin-bottom: -10px !important;}  
+				.hero-section p{ font-size: 1.1rem; margin-top: -10px;}
+				.hero-section button{ margin-top: 0.2rem; font-size: 1rem;}
 				.hero-section button{ margin-top: 0.5rem;}
 				.hero-section img { margin-top: -20px; }
 				.hero-section-title-wrapper { padding: 0 20px; }
@@ -312,8 +316,9 @@
 			@media only screen and (max-width: 500px) {
 				.hero-section { padding: 120px 0 40px 0;  justify-content: flex-start;}
 				.hero-section h1 {font-size: 3rem;}
-				.hero-section h3 {font-size: 1.25rem; margin-bottom: -5px !important; margin-top: 20px !important;} 
-				.hero-section button{ margin-top: 0.5rem;}
+				.hero-section h3 {font-size: 1.3rem; margin-bottom: -5px !important; margin-top: 20px !important;} 
+				.hero-section p { margin-top: 0;} 
+				.hero-section button{ margin-top: 0.5rem; border-radius: 8px; padding: 8px 30px !important;}
 				.hero-section img { margin-top: 20px; } 
 				.hero-section-title-wrapper { padding: 0 20px; }
 				#heroImgSmall {display: block;}
@@ -357,7 +362,7 @@
 				padding: 0 20px;
 			}
 			.hook-text-wrapper h2 { margin-bottom: 15px; }
-			.hook-text-wrapper p { font-size: 1.4rem; }
+			.hook-text-wrapper p { font-size: 1.4rem; max-width: 800px; }
 			.hook-text-wrapper button { margin-top: 20px; padding: 10px 45px;}
 			.hook-text-wrapper span { color: #2380BF;}
 			@media only screen and (max-width: 500px) { 
@@ -597,7 +602,7 @@
 				}
 				.hook-text-wrapper h2 {margin: 0;}
 				.hook-container { padding: 40px 0 20px 0;}
-				.hook-text-wrapper p { font-size: 1rem; }
+				.hook-text-wrapper p { font-size: 1rem;  max-width: none; }
 
 				.hook-carousel-img-container { width: 100%; height: 400px;}
 				.hook-content-container {display: none;}
@@ -676,7 +681,7 @@
 				justify-content: flex-start;
 				align-items: center;
 				gap: 20px;
-				padding: 180px 0;
+				padding: 120px 0;
 				width: 100%;
 			}
 			.purpose-wrapper img {
@@ -685,9 +690,9 @@
 			}
 			.gd-bg-section {
 				background: rgb(16,60,89);
-				background: -moz-linear-gradient(45deg, rgba(16,60,89,1) 0%, rgba(35,128,191,1) 100%);
-				background: -webkit-linear-gradient(45deg, rgba(16,60,89,1) 0%, rgba(35,128,191,1) 100%);
-				background: linear-gradient(45deg, rgba(16,60,89,1) 0%, rgba(35,128,191,1) 100%);
+				background: -moz-linear-gradient(0deg, rgba(16,60,89,1) 0%, rgba(35,128,191,1) 100%);
+				background: -webkit-linear-gradient(0deg, rgba(16,60,89,1) 0%, rgba(35,128,191,1) 100%);
+				background: linear-gradient(0deg, rgba(16,60,89,1) 0%, rgba(35,128,191,1) 100%);
 				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#103c59",endColorstr="#2380bf",GradientType=1);
 			}
 			.purpose-text-wrapper {
@@ -703,6 +708,7 @@
 			.purpose-text-wrapper h2 { margin-bottom: 0px; color: #fff }
 			.purpose-text-wrapper p { max-width: 750px;  color: #fff } 
 			.purpose-text-wrapper span { color: #2380BF;}
+			.purpose-text-wrapper button { margin-top: 20px;}
 
 
 			@media only screen and (min-width: 1000px) { 
@@ -710,7 +716,7 @@
 			}
 
 			@media only screen and (max-width: 1000px) { 
-				.purpose-wrapper { flex-direction: column-reverse; gap: 40px; padding: 120px 0;}
+				.purpose-wrapper { flex-direction: column; gap: 40px; padding: 120px 0;}
 				.purpose-wrapper img { max-width: 100%; }
 			}
 			@media only screen and (max-width: 500px) { 
@@ -925,13 +931,14 @@
 			}
 			.cta-text-wrapper h2 { margin-bottom: 15px; }
 			.cta-text-wrapper p { font-size: 1.4rem;}
-			.cta-text-wrapper button { margin-top: 20px; padding: 10px 45px;}
+			.cta-text-wrapper button { margin-top: 20px; padding: 10px 45px; font-size: 1.1rem;}
 			.cta-text-wrapper span { color: #2380BF;}
 
 			@media only screen and (max-width: 760px) {
 				.cta-text-wrapper h2 { margin-bottom: 0; }
 				.cta-text-wrapper p { font-size: 1rem;}
 				.cta-text-wrapper {justify-content: flex-start; align-items: flex-start; text-align: left;}
+				.cta-text-wrapper button { margin-top: 20px; padding: 10px 45px; font-size: 0.9rem;}
 			}
 		</style>
 
@@ -1135,8 +1142,9 @@
 		<div class="section-container">
 			<div class="hero-section">
 				<div class="hero-section-title-wrapper">
-					<h3>Let us Build For Generations...</h3>
-					<h1 class="hero-section-title">TOGETHER</h1>
+					<h3>Let us Build for Generations...</h3>
+					<h1 class="hero-section-title">TOGETHER.</h1>
+					<p style="color: #fff;">Training Leaders. Transforming Nations</p>
 					<a href="https://home.victorydumaguete.org/online-giving">
 						<button class="secondary">BE PART OF THE VISION</button>
 					</a>
@@ -1170,8 +1178,10 @@
 			<div class="hook-container">
 				<div class="hook-text-wrapper">
 					<h2>In the Next <span>25 Years</span> and <span>Beyond</span>.</h2>
-					<p>For over 20 years, Victory Dumaguete has seen lives transformed, leaders empowered, and the gospel advanced. But the mission continues… We are building more than a structure—we are creating a home where faith grows, leaders rise, and a lasting legacy is built. Together, we equip the next generation to impact campuses, cities, and nations.</p>
-					<p><b>This is our calling, our mission, and our future—together.</b></p>
+					<p>For over 20 years, Victory Dumaguete has seen lives transformed, leaders empowered, and the gospel advanced.
+						<p><i>And the mission continues…</i></p>
+						<p>We are building more than a structure—we are creating a <i>home</i> where disciples are made, leaders are raised, and communities are transformed.</p>
+						<!-- <p><b>This is our calling, our mission, and our future—together.</b></p> -->
 					<!-- <a><button>LEARN MORE</button></a> -->
 				</div>
 			</div>
@@ -1180,14 +1190,14 @@
 					<div class="hook-carousel-img-container" id="hook-carousel-1">
 						<div class="hook-carousel-img-fg" id="hook-carousel-fg-1">
 							<p><b>Change the Campus, Change the World!</b></p>
-							<span>Believing that world transformation begins on campus, we equip the next generation for LIFE—instilling Leadership, Integrity, Faith, and Excellence.</span>
+							<span>Believing that world transformation begins in the campus, we equip the next generation for LIFE—instilling Leadership, Integrity, Faith, and Excellence.</span>
 						</div>
 						<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741055629/Building%20Projects/477031978_1071594395005788_784685226636466821_n.jpg">
 					</div>
 
 					<div class="hook-carousel-img-container" id="hook-carousel-2">
 						<div class="hook-carousel-img-fg" id="hook-carousel-fg-2">
-							<p><b>From Local to Global.</b></p>
+							<p><b>A Bible and a Passport.</b></p>
 							<span>We are committed to engaging, equipping, and empowering international students from 50+ countries to be a blessing to their home nations.</span>
 						</div>
 						<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741054244/Building%20Projects/476809431_1071594208339140_2129658794575671217_n.jpg">
@@ -1195,7 +1205,7 @@
 
 					<div class="hook-carousel-img-container" id="hook-carousel-3">
 						<div class="hook-carousel-img-fg" id="hook-carousel-fg-3">
-							<p><b>Change a LIFE. Change the Nation.</b></p>
+							<p><b>Change a Life. Change the Nation.</b></p>
 							<span>We partner with Real LIFE Foundation to empower underprivileged youth through scholarships, mentorship, and leadership development, equipping them to grow in faith and fulfill their potential.</span>
 						</div>
 						<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741030651/Building%20Projects/476912434_1071594211672473_526760610120245937_n_1.png">
@@ -1203,7 +1213,7 @@
 
 					<div class="hook-carousel-img-container" id="hook-carousel-4">
 						<div class="hook-carousel-img-fg" id="hook-carousel-fg-4">
-							<p><b>One Foot on the Campus, One Foot in the Community.</b></p>
+							<p><b>One Foot in the Campus, One Foot in the Community.</b></p>
 							<span>We are committed to advancing the gospel by planting churches that raise up the next generation, transforming families, nations, and the world.</span>
 						</div>
 						<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741054263/Building%20Projects/477445705_1071594225005805_2520760378566132057_n.jpg">
@@ -1233,15 +1243,15 @@
 				</div>
 
 				<div class="hook-content-container" id="hook-content-progress-2" onclick="handleHookClick(2)">
-					<h5>World Missions</h5>
+					<h5>Global Missions</h5>
 				</div>
 
 				<div class="hook-content-container" id="hook-content-progress-3" onclick="handleHookClick(3)">
-					<h5>ReaLIFE</h5>
+					<h5>Real LIFE</h5>
 				</div>
 
 				<div class="hook-content-container" id="hook-content-progress-4" onclick="handleHookClick(4)">
-					<h5>Church planting</h5>
+					<h5>Church Planting</h5>
 				</div>
 			</div>
 		</div>
@@ -1262,15 +1272,15 @@
 	<div class="section-wrapper">
 		<div class="section-container"> 
 			<div class="purpose-wrapper">
+				<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741442270/VICTORY_1A_smaller_t8iht8.jpg">
 				<div class="purpose-text-wrapper">
 					<h2>From Local to Global</h2>
-					<p>Dumaguete City, a thriving student hub with 15,000 to 20,000 students, is a gathering place for future leaders from across the nation and the world. As they make this city their home, we have the privilege and responsibility to equip them—not just for campus life, but for the greater mission of bringing the gospel to their communities and nations. </p>
+					<p>Dumaguete City, a thriving student hub with 15,000 to 20,000 students, is a gathering place for future leaders from across the nation and the world. As they make this city their home, we have the unique responsibility to equip them for the greater mission of bringing the gospel to their communities and nations of the world. </p>
 					<p>By investing in the next generation, we are raising leaders and campus missionaries, and to advance this vision, we are building a church facility as a hub for discipleship and leadership development.</p>
 					<a href="https://home.victorydumaguete.org/online-giving">
 						<button class="secondary">BE PART OF THE VISION</button>
 					</a>
 				</div>
-				<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741442270/VICTORY_1A_smaller_t8iht8.jpg">
 			</div>
  
 		</div>
@@ -1367,10 +1377,10 @@
 		<div class="section-container"> 
 			<div class="cta-container">
 				<div class="cta-text-wrapper">
-					<h2>Building For <span>Generations</span>, Impacting <span>Nations</span></h2>
-					<p>As we celebrate 25 years of God's faithfulness, we look ahead with greater faith and vision. This building is more than a structure—it is a launchpad for the next generation of leaders, missionaries, and world-changers. <b>For the next 25 years and beyond</b>, it will be a place where disciples are made, faith is strengthened, and God's kingdom advances across campuses, communities, and nations. <b>Let's build together for the generations to come.</b></p>
+					<h2>Building for <span>Generations</span>, Reaching the <span>Nations</span></h2>
+					<p>For the last 25 years, we have witnessed God's faithfulness—lives transformed, leaders empowered, and the gospel advanced. <b>Now, as we step in to the next 25 years</b>, we look ahead with even greater faith and vision. We invite you to be part of the mission God has called us to. Let's build together the for generations to come.</p>
 					
-					<a href="https://home.victorydumaguete.org/online-giving"><button>GIVE TO THE BUILDING</button></a>
+					<a href="https://home.victorydumaguete.org/online-giving"><button>GIVE TO THE BUILDING NOW</button></a>
 				</div>
 			</div>
 		</div>
