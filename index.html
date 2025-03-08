@@ -231,9 +231,9 @@
     <style>
 			.blue-gradiant-bg {
 				background: rgb(14,92,145);
-				background: -moz-linear-gradient(0deg, rgba(14,92,145,0) 30%, rgba(14,92,145,1) 100%);
-				background: -webkit-linear-gradient(0deg, rgba(14,92,145,0) 30%, rgba(14,92,145,1) 100%);
-				background: linear-gradient(0deg, rgba(14,92,145,0) 30%, rgba(14,92,145,1) 100%);
+				background: -moz-linear-gradient(0deg, rgba(14,92,145,0) 20%, rgba(14,92,145,1) 95%);
+				background: -webkit-linear-gradient(0deg, rgba(14,92,145,0) 20%, rgba(14,92,145,1) 95%);
+				background: linear-gradient(0deg, rgba(14,92,145,0) 20%, rgba(14,92,145,1) 95%);
 				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e5c91",endColorstr="#0e5c91",GradientType=1);
 			}
 			.hero-section { 
@@ -241,17 +241,13 @@
 				flex-direction: column;
 				color: #fff; 
 				padding: 120px 0; 
-				min-height: 500px; 
-				background-image: url('https://res.cloudinary.com/dzpphtqox/image/upload/v1741025615/Building%20Projects/Lines.png');
-				background-repeat: no-repeat;
-				background-position: top;
-				background-size: contain;
+				min-height: 500px;
 			}
 			.hero-section-title-wrapper { display: flex; flex-direction: column; gap: 0; padding: 0 40px; z-index: 3;}
 			.hero-section h1{ font-weight: bold; color: #fff; }
-			.hero-section h3{ margin-top: 40px; margin-bottom: -20px; font-weight: 200; color: #fff; }
-			.hero-section button{ margin-top: 1rem;}
-			.hero-section img{ margin-top: -140px; z-index: 1;}
+			.hero-section h3{ margin-top: 20px; margin-bottom: -20px; font-weight: 200; color: #fff; }
+			.hero-section button{ margin-top: .2rem;}
+			.hero-section img{ margin-top: -150px; z-index: 1;}
 			.hero-section .bg-container {
 				position: absolute;
 				z-index: 0;
@@ -263,6 +259,11 @@
 			.hero-section .bg-container img{object-fit: contain !important; width: 100%; object-position: center;}
 			#heroImgSmall {display: none;}
 
+			.hero-section .bg-container img{
+				position: absolute;
+				top: 11.8%; 
+			}
+
 
 			/* Ipad */
 			@media only screen and (max-width: 1000px) {
@@ -270,15 +271,41 @@
 				.hero-section h3 {font-size: 1.5rem;} 
 				.hero-section button{ margin-top: 0.2rem;}
 				.hero-section img { margin-top: -80px; }
+
+				.hero-section .bg-container img{
+					position: absolute;
+					top: 10%; 
+				}
+
+				.blue-gradiant-bg {
+					background: rgb(14,92,145);
+					background: -moz-linear-gradient(0deg, rgba(14,92,145,0) 20%, rgba(14,92,145,1) 90%);
+					background: -webkit-linear-gradient(0deg, rgba(14,92,145,0) 20%, rgba(14,92,145,1) 90%);
+					background: linear-gradient(0deg, rgba(14,92,145,0) 20%, rgba(14,92,145,1) 90%);
+					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e5c91",endColorstr="#0e5c91",GradientType=1);
+				}
 			}
 			@media only screen and (max-width: 700px) {
 				.hero-section h1 {font-size: 3.5rem;}
 				.hero-section h3 {font-size: 1.5rem; margin-bottom: -10px !important;} 
 				.hero-section button{ margin-top: 0.5rem;}
 				.hero-section img { margin-top: -20px; }
+
+				.hero-section .bg-container img{
+					position: absolute;
+					top: 10%; 
+				}
+
+				.blue-gradiant-bg {
+					background: rgb(14,92,145);
+					background: -moz-linear-gradient(0deg, rgba(14,92,145,0) 00%, rgba(14,92,145,1) 80%);
+					background: -webkit-linear-gradient(0deg, rgba(14,92,145,0) 00%, rgba(14,92,145,1) 80%);
+					background: linear-gradient(0deg, rgba(14,92,145,0) 00%, rgba(14,92,145,1) 80%);
+					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e5c91",endColorstr="#0e5c91",GradientType=1);
+				}
 			}
 			@media only screen and (max-width: 500px) {
-				.hero-section { padding: 60px 0 0 0; min-height: fit-content;}
+				.hero-section { padding: 60px 0 0 0; min-height: 80vh; justify-content: center;}
 				.hero-section h1 {font-size: 3rem;}
 				.hero-section h3 {font-size: 1.25rem; margin-bottom: -5px !important; margin-top: 20px !important;} 
 				.hero-section button{ margin-top: 0.5rem;}
@@ -287,12 +314,18 @@
 				#heroImgSmall {display: block;}
 				#heroImgLarge {display: none;}
 				
-				.hero-section .bg-container img{margin-top: 0px;}
+				.hero-section .bg-container img{
+					position: absolute;
+					top: 15%; 
+				}
+				.hero-section .bg-container:last-child img{
+					transform: scale(1.2);
+				}
 				.blue-gradiant-bg {
 					background: rgb(14,92,145);
-					background: -moz-linear-gradient(0deg, rgba(14,92,145,0) 20%, rgba(14,92,145,1) 100%);
-					background: -webkit-linear-gradient(0deg, rgba(14,92,145,0) 20%, rgba(14,92,145,1) 100%);
-					background: linear-gradient(0deg, rgba(14,92,145,0) 20%, rgba(14,92,145,1) 100%);
+					background: -moz-linear-gradient(0deg, rgba(14,92,145,0) 00%, rgba(14,92,145,1) 80%);
+					background: -webkit-linear-gradient(0deg, rgba(14,92,145,0) 00%, rgba(14,92,145,1) 80%);
+					background: linear-gradient(0deg, rgba(14,92,145,0) 00%, rgba(14,92,145,1) 80%);
 					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e5c91",endColorstr="#0e5c91",GradientType=1);
 				}
 			}
@@ -1014,6 +1047,9 @@
 				<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741406076/VICTORY_1_full_small_last_ztcjk6.png" id="heroImgSmall">
 				<div class="bg-container">
 					<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741025998/Building%20Projects/world-map-silhouette-global-mapping-in-the-digital-age-illustration-png-2_1.png">
+				</div>
+				<div class="bg-container">
+					<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741025615/Building%20Projects/Lines.png">
 				</div>
 			</div>
 		</div>
