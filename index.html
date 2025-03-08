@@ -830,6 +830,26 @@
 				-webkit-box-shadow: 6px 6px 20px 0px rgba(0,0,0,0.40);
 				-moz-box-shadow: 6px 6px 20px 0px rgba(0,0,0,0.40);
 			}
+			.feature-image.ft-placeholder {
+				opacity: 0;
+				position: relative;
+				z-index: 0;
+				left: auto;
+				top: auto;
+				min-height: 500px;
+			}
+			@media only screen and (max-width: 760px) {
+				.feature-wrapper { padding: 80px 0;}
+				.feature-image { max-width: 100%; height: 60vw; object-fit: cover; min-height: 0; border-radius: 20px;}
+				.feature-image.ft-placeholder {min-height: 0;}
+				.feature-container {flex-direction: column-reverse; gap: 40px;}
+				.feature-text-wrapper {max-width: 100%; display: grid; grid-template-columns: 1fr 1fr;}
+				.feature-title-wrapper {border-bottom: 1px dashed rgba(53, 68, 71, 0.10);}
+			}
+			@media only screen and (max-width: 500px) {
+				.feature-text-wrapper {grid-template-columns: 1fr;}
+				.feature-title-wrapper {border-bottom: 0;}
+			}
     </style>
 
 
@@ -1244,7 +1264,7 @@
 						</div>
 						
 					</div>
-					<div> </div>
+					<img class="feature-image ft-placeholder" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182936/20240426_MH_B01.jpg">
 					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182936/20240426_MH_B01.jpg" id="feature-image-1">
 					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182551/Unknown.jpg" id="feature-image-2">
 					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182690/Unknown-3.png" id="feature-image-3">
