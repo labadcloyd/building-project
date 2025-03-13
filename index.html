@@ -776,7 +776,7 @@
 			.feature-text-container {
 				display: flex;
 				flex-direction: column; 
-				padding: 20px;
+				padding: 12px 20px;
 				width: 100%;
 				border-bottom: 1px dashed rgba(53, 68, 71, 0.10);
 				overflow: hidden;
@@ -789,33 +789,44 @@
 			}
 			.feature-text-container h5 {
 				font-weight: 200;
+				font-size: 1rem;
 			}
 
 			@keyframes featureTextLoop {
 				0% { max-height: 0; }
 				3% { max-height: 500px; }
-				17% { max-height: 500px; }
-				20% { max-height: 0; }
+				7% { max-height: 500px; }
+				10% { max-height: 0; }
 				100% { max-height: 0; }
 			}
-			#feature-1 p{ animation: featureTextLoop 35s ease-in-out infinite; animation-delay: 0s; } 
-			#feature-2 p{ animation: featureTextLoop 35s ease-in-out infinite; animation-delay: 7s; } 
-			#feature-3 p{ animation: featureTextLoop 35s ease-in-out infinite; animation-delay: 14s; } 
-			#feature-4 p{ animation: featureTextLoop 35s ease-in-out infinite; animation-delay: 21s; }
-			#feature-5 p{ animation: featureTextLoop 35s ease-in-out infinite; animation-delay: 28s; }
+			#feature-1 p{ animation: featureTextLoop 70s ease-in-out infinite; animation-delay: 0s; } 
+			#feature-2 p{ animation: featureTextLoop 70s ease-in-out infinite; animation-delay: 7s; } 
+			#feature-3 p{ animation: featureTextLoop 70s ease-in-out infinite; animation-delay: 14s; } 
+			#feature-4 p{ animation: featureTextLoop 70s ease-in-out infinite; animation-delay: 21s; }
+			#feature-5 p{ animation: featureTextLoop 70s ease-in-out infinite; animation-delay: 28s; }
+			#feature-6 p{ animation: featureTextLoop 70s ease-in-out infinite; animation-delay: 35s; } 
+			#feature-7 p{ animation: featureTextLoop 70s ease-in-out infinite; animation-delay: 42s; } 
+			#feature-8 p{ animation: featureTextLoop 70s ease-in-out infinite; animation-delay: 49s; } 
+			#feature-9 p{ animation: featureTextLoop 70s ease-in-out infinite; animation-delay: 56s; }
+			#feature-10 p{ animation: featureTextLoop 70s ease-in-out infinite; animation-delay: 63s; }
 
 			@keyframes featureTitleLoop {
 				0% { font-weight: 200; color: #354447;}
 				1% { font-weight: 600; color: #2380BF;}
-				19% { font-weight: 600; color: #2380BF;}
-				20% { font-weight: 200; color: #354447}
+				9% { font-weight: 600; color: #2380BF;}
+				10% { font-weight: 200; color: #354447}
 				100% { font-weight: 200; color: #354447}
 			}
-			#feature-1 h5{ animation: featureTitleLoop 35s ease-in-out infinite; animation-delay: 0s; } 
-			#feature-2 h5{ animation: featureTitleLoop 35s ease-in-out infinite; animation-delay: 7s; } 
-			#feature-3 h5{ animation: featureTitleLoop 35s ease-in-out infinite; animation-delay: 14s; } 
-			#feature-4 h5{ animation: featureTitleLoop 35s ease-in-out infinite; animation-delay: 21s; }
-			#feature-5 h5{ animation: featureTitleLoop 35s ease-in-out infinite; animation-delay: 28s; }
+			#feature-1 h5{ animation: featureTitleLoop 70s ease-in-out infinite; animation-delay: 0s; } 
+			#feature-2 h5{ animation: featureTitleLoop 70s ease-in-out infinite; animation-delay: 7s; } 
+			#feature-3 h5{ animation: featureTitleLoop 70s ease-in-out infinite; animation-delay: 14s; } 
+			#feature-4 h5{ animation: featureTitleLoop 70s ease-in-out infinite; animation-delay: 21s; }
+			#feature-5 h5{ animation: featureTitleLoop 70s ease-in-out infinite; animation-delay: 28s; }
+			#feature-6 h5{ animation: featureTitleLoop 70s ease-in-out infinite; animation-delay: 35s; } 
+			#feature-7 h5{ animation: featureTitleLoop 70s ease-in-out infinite; animation-delay: 42s; } 
+			#feature-8 h5{ animation: featureTitleLoop 70s ease-in-out infinite; animation-delay: 49s; } 
+			#feature-9 h5{ animation: featureTitleLoop 70s ease-in-out infinite; animation-delay: 56s; }
+			#feature-10 h5{ animation: featureTitleLoop 70s ease-in-out infinite; animation-delay: 63s; }
 			
 			.feature-progress-bar-container {
 				position: absolute;
@@ -834,45 +845,60 @@
 
 			@keyframes featureProgressBarLoop {
 				0% { transform: translateY(-100%); }
-				19% { transform: translateY(0%); }
-				20% { transform: translateY(-100%); }
+				9% { transform: translateY(0%); }
+				10% { transform: translateY(-100%); }
 				100% { transform: translateY(-100%); }
 			}
-			#feature-bar-1 { animation: featureProgressBarLoop 35s ease-in-out infinite; animation-delay: 0s; } 
-			#feature-bar-2 { animation: featureProgressBarLoop 35s ease-in-out infinite; animation-delay: 7s; } 
-			#feature-bar-3 { animation: featureProgressBarLoop 35s ease-in-out infinite; animation-delay: 14s; } 
-			#feature-bar-4 { animation: featureProgressBarLoop 35s ease-in-out infinite; animation-delay: 21s; }
-			#feature-bar-5 { animation: featureProgressBarLoop 35s ease-in-out infinite; animation-delay: 28s; }
+			#feature-bar-1 { animation: featureProgressBarLoop 70s ease-in-out infinite; animation-delay: 0s; } 
+			#feature-bar-2 { animation: featureProgressBarLoop 70s ease-in-out infinite; animation-delay: 7s; } 
+			#feature-bar-3 { animation: featureProgressBarLoop 70s ease-in-out infinite; animation-delay: 14s; } 
+			#feature-bar-4 { animation: featureProgressBarLoop 70s ease-in-out infinite; animation-delay: 21s; }
+			#feature-bar-5 { animation: featureProgressBarLoop 70s ease-in-out infinite; animation-delay: 28s; }
+			#feature-bar-6 { animation: featureProgressBarLoop 70s ease-in-out infinite; animation-delay: 35s; } 
+			#feature-bar-7 { animation: featureProgressBarLoop 70s ease-in-out infinite; animation-delay: 42s; } 
+			#feature-bar-8 { animation: featureProgressBarLoop 70s ease-in-out infinite; animation-delay: 49s; } 
+			#feature-bar-9 { animation: featureProgressBarLoop 70s ease-in-out infinite; animation-delay: 56s; }
+			#feature-bar-10 { animation: featureProgressBarLoop 70s ease-in-out infinite; animation-delay: 63s; }
 
 			@keyframes featureProgressBarContainerLoop {
 				0% { transform: translateY(-100%); }
 				1% { transform: translateY(0%); }
-				19% { transform: translateY(0%); }
+				9% { transform: translateY(0%); }
 
-				20% { transform: translateY(200%); }
+				10% { transform: translateY(200%); }
 				100% { transform: translateY(200%); }
 			}
-			#feature-bar-container-1 { animation: featureProgressBarContainerLoop 35s ease-in-out infinite; animation-delay: 0s; } 
-			#feature-bar-container-2 { animation: featureProgressBarContainerLoop 35s ease-in-out infinite; animation-delay: -28s; } 
-			#feature-bar-container-3 { animation: featureProgressBarContainerLoop 35s ease-in-out infinite; animation-delay: -21s; } 
-			#feature-bar-container-4 { animation: featureProgressBarContainerLoop 35s ease-in-out infinite; animation-delay: -14s; }
-			#feature-bar-container-5 { animation: featureProgressBarContainerLoop 35s ease-in-out infinite; animation-delay: -7s; }
+			#feature-bar-container-1 { animation: featureProgressBarContainerLoop 70s ease-in-out infinite; animation-delay: 0s; } 
+			#feature-bar-container-2 { animation: featureProgressBarContainerLoop 70s ease-in-out infinite; animation-delay: -63s; } 
+			#feature-bar-container-3 { animation: featureProgressBarContainerLoop 70s ease-in-out infinite; animation-delay: -56s; } 
+			#feature-bar-container-4 { animation: featureProgressBarContainerLoop 70s ease-in-out infinite; animation-delay: -49s; }
+			#feature-bar-container-5 { animation: featureProgressBarContainerLoop 70s ease-in-out infinite; animation-delay: -42s; }
+			#feature-bar-container-6 { animation: featureProgressBarContainerLoop 70s ease-in-out infinite; animation-delay: -35s; } 
+			#feature-bar-container-7 { animation: featureProgressBarContainerLoop 70s ease-in-out infinite; animation-delay: -28s; } 
+			#feature-bar-container-8 { animation: featureProgressBarContainerLoop 70s ease-in-out infinite; animation-delay: -21s; } 
+			#feature-bar-container-9 { animation: featureProgressBarContainerLoop 70s ease-in-out infinite; animation-delay: -14s; }
+			#feature-bar-container-10 { animation: featureProgressBarContainerLoop 70s ease-in-out infinite; animation-delay: -7s; }
 			
 
 			@keyframes featureImgContainerLoop {
 				0% { opacity: 0; }
 				1% { opacity: 1; }
 				
-				20% { opacity: 1; }
-				22% { opacity: 0; }
+				10% { opacity: 1; }
+				12% { opacity: 0; }
 
 				100% { opacity: 0; }
 			}
-			#feature-image-1 { animation: featureImgContainerLoop 35s ease-in-out infinite; animation-delay: 0s; } 
-			#feature-image-2 { animation: featureImgContainerLoop 35s ease-in-out infinite; animation-delay: -28s; } 
-			#feature-image-3 { animation: featureImgContainerLoop 35s ease-in-out infinite; animation-delay: -21s; } 
-			#feature-image-4 { animation: featureImgContainerLoop 35s ease-in-out infinite; animation-delay: -14s; }
-			#feature-image-5 { animation: featureImgContainerLoop 35s ease-in-out infinite; animation-delay: -7s; }
+			#feature-image-1 { animation: featureImgContainerLoop 70s ease-in-out infinite; animation-delay: 0s; } 
+			#feature-image-2 { animation: featureImgContainerLoop 70s ease-in-out infinite; animation-delay: -63s; } 
+			#feature-image-3 { animation: featureImgContainerLoop 70s ease-in-out infinite; animation-delay: -56s; } 
+			#feature-image-4 { animation: featureImgContainerLoop 70s ease-in-out infinite; animation-delay: -49s; }
+			#feature-image-5 { animation: featureImgContainerLoop 70s ease-in-out infinite; animation-delay: -42s; }
+			#feature-image-6 { animation: featureImgContainerLoop 70s ease-in-out infinite; animation-delay: -35s; } 
+			#feature-image-7 { animation: featureImgContainerLoop 70s ease-in-out infinite; animation-delay: -28s; } 
+			#feature-image-8 { animation: featureImgContainerLoop 70s ease-in-out infinite; animation-delay: -21s; } 
+			#feature-image-9 { animation: featureImgContainerLoop 70s ease-in-out infinite; animation-delay: -14s; }
+			#feature-image-10 { animation: featureImgContainerLoop 70s ease-in-out infinite; animation-delay: -7s; }
 
 			.feature-image {
 				opacity: 1;
@@ -880,7 +906,7 @@
 				top: 0;
 				right: 0;
 				max-width: 75%;
-				width: 100%;
+				max-height: 600px;
 				height: 100%;
 				border-radius: 30px;
 				object-fit: cover;
@@ -897,11 +923,13 @@
 				left: auto;
 				top: auto;
 				min-height: 500px;
+				max-height: 600px;
+				height: 100%;
 			}
 			@media only screen and (max-width: 820px) {
 				.feature-wrapper { padding: 80px 0;}
 				.feature-image { max-width: 100%; height: 60vw; object-fit: cover; min-height: 0; border-radius: 20px;}
-				.feature-image.ft-placeholder {min-height: 0;}
+				.feature-image.ft-placeholder {min-height: 0; height: 60vw; }
 				.feature-container {flex-direction: column-reverse; gap: 40px;}
 				.feature-text-wrapper {max-width: 100%; display: grid; grid-template-columns: 1fr 1fr;}
 				.feature-title-wrapper {border-bottom: 1px dashed rgba(53, 68, 71, 0.10);}
@@ -1322,48 +1350,58 @@
 
 
 						<div class="feature-text-container" id="feature-1">
-							<h5>Assembly Hall</h5>
-							<p>for worship services, conferences and seminars.</p>
-							<div class="feature-progress-bar-container" id="feature-bar-container-1">
-								<div class="feature-progress-bar" id="feature-bar-1"></div>
-							</div>
+							<h5>Worship hall</h5> <!-- <p>for worship services, conferences and seminars.</p> -->
+							<div class="feature-progress-bar-container" id="feature-bar-container-1"> <div class="feature-progress-bar" id="feature-bar-1"></div></div>
 						</div>
 						<div class="feature-text-container" id="feature-2">
-							<h5>Training Rooms</h5>
-							<p>to develop more leaders in different sectors of society.</p>
-							<div class="feature-progress-bar-container" id="feature-bar-container-2">
-								<div class="feature-progress-bar" id="feature-bar-2"></div>
-							</div>
+							<h5>Lobby</h5> <!-- <p>for discipleship, fellowship, and engaging students.</p> -->
+							<div class="feature-progress-bar-container" id="feature-bar-container-2"> <div class="feature-progress-bar" id="feature-bar-2"></div></div>
 						</div>
 						<div class="feature-text-container" id="feature-3">
-							<h5>Roof Deck</h5>
-							<p>for discipleship, fellowship, and engaging students.</p>
-							<div class="feature-progress-bar-container" id="feature-bar-container-3">
-								<div class="feature-progress-bar" id="feature-bar-3"></div>
-							</div>
+							<h5>Prayer room</h5> <!-- <p>where students can meet, hang out, or study</p> -->
+							<div class="feature-progress-bar-container" id="feature-bar-container-3"> <div class="feature-progress-bar" id="feature-bar-3"></div></div>
 						</div>
 						<div class="feature-text-container" id="feature-4">
-							<h5>Student lounges</h5>
-							<p>where students can meet, hang out, or study</p>
-							<div class="feature-progress-bar-container" id="feature-bar-container-4">
-								<div class="feature-progress-bar" id="feature-bar-4"></div>
-							</div>
+							<h5>Roof deck</h5> <!-- <p>to develop more leaders in different sectors of society.</p> -->
+							<div class="feature-progress-bar-container" id="feature-bar-container-4"> <div class="feature-progress-bar" id="feature-bar-4"></div></div>
 						</div>
 						<div class="feature-text-container" id="feature-5">
-							<h5>Offices</h5>
-							<p>for Victory Dumaguete Staff</p>
-							<div class="feature-progress-bar-container" id="feature-bar-container-5">
-								<div class="feature-progress-bar" id="feature-bar-5"></div>
-							</div>
+							<h5>Cafe</h5> <!-- <p>for Victory Dumaguete Staff</p> -->
+							<div class="feature-progress-bar-container" id="feature-bar-container-5"> <div class="feature-progress-bar" id="feature-bar-5"></div></div>
+						</div>
+						<div class="feature-text-container" id="feature-6">
+							<h5>Bandroom</h5> <!-- <p>for worship services, conferences and seminars.</p> -->
+							<div class="feature-progress-bar-container" id="feature-bar-container-6"> <div class="feature-progress-bar" id="feature-bar-6"></div></div>
+						</div>
+						<div class="feature-text-container" id="feature-7">
+							<h5>Training</h5> <!-- <p>for discipleship, fellowship, and engaging students.</p> -->
+							<div class="feature-progress-bar-container" id="feature-bar-container-7"> <div class="feature-progress-bar" id="feature-bar-7"></div></div>
+						</div>
+						<div class="feature-text-container" id="feature-8">
+							<h5>Toddler</h5> <!-- <p>where students can meet, hang out, or study</p> -->
+							<div class="feature-progress-bar-container" id="feature-bar-container-8"> <div class="feature-progress-bar" id="feature-bar-8"></div></div>
+						</div>
+						<div class="feature-text-container" id="feature-9">
+							<h5>Nursing room</h5> <!-- <p>to develop more leaders in different sectors of society.</p> -->
+							<div class="feature-progress-bar-container" id="feature-bar-container-9"> <div class="feature-progress-bar" id="feature-bar-9"></div></div>
+						</div>
+						<div class="feature-text-container" id="feature-10">
+							<h5>Stairs</h5> <!-- <p>for Victory Dumaguete Staff</p> -->
+							<div class="feature-progress-bar-container" id="feature-bar-container-10"> <div class="feature-progress-bar" id="feature-bar-10"></div></div>
 						</div>
 						
 					</div>
 					<img class="feature-image ft-placeholder" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182936/20240426_MH_B01.jpg">
-					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182936/20240426_MH_B01.jpg" id="feature-image-1">
-					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182551/Unknown.jpg" id="feature-image-2">
-					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182690/Unknown-3.png" id="feature-image-3">
-					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182689/Unknown-4.jpg" id="feature-image-4">
-					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741182688/Unknown-2.jpg" id="feature-image-5">
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741879980/Building%20Projects/main-hall-min.jpg" id="feature-image-1">
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741880176/Building%20Projects/For_Exhibit_Renderings-2.jpg" id="feature-image-2">
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741879982/Building%20Projects/prayer-room-min.jpg" id="feature-image-3">
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741877504/Building%20Projects/Cafe_32x27_-_Square_Panel-2-min.jpg" id="feature-image-4">
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741877505/Building%20Projects/Cafe_32x27_-_Square_Panel-3-min.jpg" id="feature-image-5">
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741877505/Building%20Projects/Cafe_32x27_-_Square_Panel-min.jpg" id="feature-image-6">
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741877505/Building%20Projects/Cafe_32x27_-_Square_Panel-4-min.jpg" id="feature-image-7">
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741879982/Building%20Projects/toddlers-min.jpg" id="feature-image-8">
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741879982/Building%20Projects/nursing-min.jpg" id="feature-image-9">
+					<img class="feature-image" src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741879982/Building%20Projects/stairs-min.jpg" id="feature-image-10">
 
 				</div>
 			</div>
