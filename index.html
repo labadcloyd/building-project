@@ -69,9 +69,9 @@
 					background-color: #2380BF;
 					color: #fff;
 					transition: .3s;
-					box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.10);
-					-webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.10);
-					-moz-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.10);
+					box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.05);
+					-webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.05);
+					-moz-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.05);
 					width: fit-content;
         }
         button:hover {
@@ -105,8 +105,8 @@
 
 			@media only screen and (max-width: 500px) { 
 				button {
-					padding: 6px 20px !important;
-					font-size: 0.8rem;
+					padding: 10px 20px !important;
+					font-size: 0.9rem;
 				}
 			}
 
@@ -686,15 +686,19 @@
     <style>
 			.purpose-wrapper {
 				display: flex;
+				flex-direction: column;
 				justify-content: flex-start;
-				align-items: center;
-				gap: 20px;
+				align-items: flex-start;
+				gap: 60px;
 				padding: 120px 0;
 				width: 100%;
 			}
 			.purpose-wrapper img {
-				max-width: 48%;
+				max-height: 500px;
+				width: 100%;
 				border-radius: 20px;
+				object-fit: cover;
+				object-position: bottom;
 			}
 			.gd-bg-section {
 				background: rgb(16,60,89);
@@ -706,30 +710,41 @@
 			.purpose-text-wrapper {
 				display: flex;
 				flex-direction: column;
-				justify-content: center;
+				justify-content: flex-start;
 				align-items: flex-start;
 				width: 100%;
-				text-align: left;
-				gap: 20px;
+				text-align: left; 
 				padding: 0 20px;
 			}
-			.purpose-text-wrapper h2 { margin-bottom: 0px; color: #fff }
-			.purpose-text-wrapper p { max-width: 750px;  color: #fff } 
-			.purpose-text-wrapper span { color: #2380BF;}
-			.purpose-text-wrapper button { margin-top: 20px;}
+			.purpose-text-wrapper:nth-child(2){ margin-top: 30px; }
+
+			.purpose-text-wrapper h5 { color: #2380BF; font-weight: 600;}
+			.purpose-text-wrapper h2 { font-size: 2rem; color: #8f8f8f; font-weight: 400;}
+			.purpose-text-wrapper p { max-width: 750px; margin-bottom: 20px;} 
+			.purpose-text-wrapper span { color: #354447; font-weight: 700;}
+			.purpose-text-wrapper button { margin-top: 10px;}
+
+			.purpose-row-wrapper {
+				display: flex;
+				width: 100%;
+			}
 
 
 			@media only screen and (min-width: 1000px) { 
 				.purpose-wrapper img { width: 100%; min-height: 450px; object-fit: cover;}
-			}
-
-			@media only screen and (max-width: 1000px) { 
 				.purpose-wrapper { flex-direction: column; gap: 40px; padding: 120px 0;}
 				.purpose-wrapper img { max-width: 100%; }
+			}
+
+			@media (max-width: 820px) {
+				.purpose-text-wrapper h5 {font-size: 1rem;}
+				.purpose-text-wrapper h2 {font-size: 1.5rem;}
 			}
 			@media only screen and (max-width: 500px) { 
 				.purpose-wrapper { padding: 60px 0;}
 				.purpose-wrapper img { max-width: 100%; }
+				.purpose-row-wrapper { flex-direction: column; gap: 20px; }
+			.purpose-text-wrapper:nth-child(2){ margin-top: 0px; }
 			}
     </style>
 
@@ -1310,20 +1325,26 @@
 	<div class="section-wrapper">
 		<div class="section-container"> 
 			<div class="purpose-wrapper">
-				<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741442270/VICTORY_1A_smaller_t8iht8.jpg">
-				<div class="purpose-text-wrapper">
-					<h2>From Local to Global</h2>
-					<p>Dumaguete City, a premier student hub of close to 30,000 students, is a gathering place for future leaders from across the nation and the world. As they establish temporary residence in this city, we have the unique responsibility to reach and equip them for the greater mission of bringing the gospel to the communities and nations of the world.</p>
-					<p>By investing in the next generation, we are raising leaders from all across the nation and the world. To see the fruition of this vision, we are building a church facility as a hub for discipleship and leadership development.</p>
-					<a href="https://home.victorydumaguete.org/online-giving">
-						<button class="secondary">BE PART OF THE VISION</button>
-					</a>
-				</div>
+				<div class="purpose-row-wrapper">
+					<div class="purpose-text-wrapper">
+						<h5>From Local to Global</h5>
+						<h2>Dumaguete City, a premier student hub of close to <span>30,000 students</span>, it is a gathering place for <span>future leaders</span> from across the nation and the world.</h2>
+					</div>
+					<div class="purpose-text-wrapper"> 
+						<p>As they establish temporary residence in this city, we have the unique responsibility to reach and equip them for the greater mission of bringing the gospel to the communities and nations of the world.</p>
+						<p>By investing in the next generation, we are raising leaders from all across the nation and the world. To see the fruition of this vision, we are building a church facility as a hub for discipleship and leadership development.</p>
+						<a href="https://home.victorydumaguete.org/online-giving">
+							<button class="secondary">BE PART OF THE VISION</button>
+						</a>
+					</div>
+				</div> 
+ 
+				<img src="https://res.cloudinary.com/dzpphtqox/image/upload/v1741880941/Building%20Projects/VICTORY_2A-2-min.jpg"> 
 			</div>
  
 		</div>
 
-		<div class="section-line-wrapper gd-bg-section">
+		<div class="section-line-wrapper light-cyan-bg section-top-line section-bottom-line">
 			<div class="section-line-container">
 				<div class="section-line-solid"></div>
 				<div class="section-line-dashed"></div>
