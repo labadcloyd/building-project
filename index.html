@@ -796,6 +796,7 @@
 				border-bottom: 1px dashed rgba(53, 68, 71, 0.10);
 				overflow: hidden;
 				position: relative;
+				cursor: pointer;
 			}
 			.feature-text-container p {
 				max-height: 0;
@@ -975,7 +976,7 @@
 				text-align: center;
 				gap: 15px;
 			}
-			.cta-text-wrapper h2 { margin-bottom: 15px; }
+			.cta-text-wrapper h2 { margin-bottom: 15px; font-size: 2.8rem;}
 			.cta-text-wrapper p { font-size: 1.4rem;}
 			.cta-text-wrapper button { margin-top: 20px;  font-size: 1.1rem; border-radius: 10px;}
 			.cta-text-wrapper span { color: #2380BF;}
@@ -1367,39 +1368,39 @@
 						</div>
 
 
-						<div class="feature-text-container" id="feature-1">
+						<div class="feature-text-container" id="feature-1" onclick="handlefeatureClick(1)">
 							<h5>Worship Sanctuary</h5> <!-- <p>for worship services, conferences and seminars.</p> -->
 							<div class="feature-progress-bar-container" id="feature-bar-container-1"> <div class="feature-progress-bar" id="feature-bar-1"></div></div>
 						</div>
-						<div class="feature-text-container" id="feature-2">
+						<div class="feature-text-container" id="feature-2" onclick="handlefeatureClick(2)">
 							<h5>Lobby</h5> <!-- <p>for discipleship, fellowship, and engaging students.</p> -->
 							<div class="feature-progress-bar-container" id="feature-bar-container-2"> <div class="feature-progress-bar" id="feature-bar-2"></div></div>
 						</div>
-						<div class="feature-text-container" id="feature-3">
-							<h5>Prayer room</h5> <!-- <p>where students can meet, hang out, or study</p> -->
+						<div class="feature-text-container" id="feature-3" onclick="handlefeatureClick(3)">
+							<h5>Prayer Room</h5> <!-- <p>where students can meet, hang out, or study</p> -->
 							<div class="feature-progress-bar-container" id="feature-bar-container-3"> <div class="feature-progress-bar" id="feature-bar-3"></div></div>
 						</div>
-						<div class="feature-text-container" id="feature-4">
-							<h5>Roof deck</h5> <!-- <p>to develop more leaders in different sectors of society.</p> -->
+						<div class="feature-text-container" id="feature-4" onclick="handlefeatureClick(4)">
+							<h5>Roof Deck</h5> <!-- <p>to develop more leaders in different sectors of society.</p> -->
 							<div class="feature-progress-bar-container" id="feature-bar-container-4"> <div class="feature-progress-bar" id="feature-bar-4"></div></div>
 						</div>
-						<div class="feature-text-container" id="feature-5">
+						<div class="feature-text-container" id="feature-5" onclick="handlefeatureClick(5)">
 							<h5>Band Room</h5> <!-- <p>for worship services, conferences and seminars.</p> -->
 							<div class="feature-progress-bar-container" id="feature-bar-container-5"> <div class="feature-progress-bar" id="feature-bar-5"></div></div>
 						</div>
-						<div class="feature-text-container" id="feature-6">
+						<div class="feature-text-container" id="feature-6" onclick="handlefeatureClick(6)">
 							<h5>Training Room</h5> <!-- <p>for discipleship, fellowship, and engaging students.</p> -->
 							<div class="feature-progress-bar-container" id="feature-bar-container-6"> <div class="feature-progress-bar" id="feature-bar-6"></div></div>
 						</div>
-						<div class="feature-text-container" id="feature-7">
+						<div class="feature-text-container" id="feature-7" onclick="handlefeatureClick(7)">
 							<h5>Toddlers Room</h5> <!-- <p>where students can meet, hang out, or study</p> -->
 							<div class="feature-progress-bar-container" id="feature-bar-container-7"> <div class="feature-progress-bar" id="feature-bar-7"></div></div>
 						</div>
-						<div class="feature-text-container" id="feature-8">
-							<h5>Nursing room</h5> <!-- <p>to develop more leaders in different sectors of society.</p> -->
+						<div class="feature-text-container" id="feature-8" onclick="handlefeatureClick(8)">
+							<h5>Nursing Room</h5> <!-- <p>to develop more leaders in different sectors of society.</p> -->
 							<div class="feature-progress-bar-container" id="feature-bar-container-8"> <div class="feature-progress-bar" id="feature-bar-8"></div></div>
 						</div>
-						<div class="feature-text-container" id="feature-9">
+						<div class="feature-text-container" id="feature-9" onclick="handlefeatureClick(9)">
 							<h5>Stairs</h5> <!-- <p>for Victory Dumaguete Staff</p> -->
 							<div class="feature-progress-bar-container" id="feature-bar-container-9"> <div class="feature-progress-bar" id="feature-bar-9"></div></div>
 						</div>
@@ -1739,6 +1740,89 @@
  
 				hookProgressBarContainer.style.animation = `hookSlideLoopBarContainer 28s ease-in-out -21s infinite`; // Apply new delay
 				hookProgressBar.style.animation = `hookSlideLoopBar 28s ease-in-out -21s infinite`; // Apply new delay 
+			}
+		}
+		
+	</script>
+
+
+	<!-- ========== FEATURE SCRIPT ========== -->
+	<script>
+		var feature1 = document.querySelector("#feature-1")
+		var feature2 = document.querySelector("#feature-2")
+		var feature3 = document.querySelector("#feature-3")
+		var feature4 = document.querySelector("#feature-4")
+		var feature5 = document.querySelector("#feature-5")
+		var feature6 = document.querySelector("#feature-6")
+		var feature7 = document.querySelector("#feature-7")
+		var feature8 = document.querySelector("#feature-8")
+		var feature9 = document.querySelector("#feature-9")
+		var features = [feature1, feature2, feature3, feature4, feature5, feature6, feature7, feature8, feature9]
+
+		var featureBar1 = document.querySelector("#feature-bar-1")
+		var featureBar2 = document.querySelector("#feature-bar-2")
+		var featureBar3 = document.querySelector("#feature-bar-3")
+		var featureBar4 = document.querySelector("#feature-bar-4")
+		var featureBar5 = document.querySelector("#feature-bar-5")
+		var featureBar6 = document.querySelector("#feature-bar-6")
+		var featureBar7 = document.querySelector("#feature-bar-7")
+		var featureBar8 = document.querySelector("#feature-bar-8")
+		var featureBar9 = document.querySelector("#feature-bar-9")
+		var featureBars = [featureBar1, featureBar2, featureBar3, featureBar4, featureBar5, featureBar6, featureBar7, featureBar8, featureBar9]
+
+		var featureBarContainer1 = document.querySelector("#feature-bar-container-1")
+		var featureBarContainer2 = document.querySelector("#feature-bar-container-2")
+		var featureBarContainer3 = document.querySelector("#feature-bar-container-3")
+		var featureBarContainer4 = document.querySelector("#feature-bar-container-4")
+		var featureBarContainer5 = document.querySelector("#feature-bar-container-5")
+		var featureBarContainer6 = document.querySelector("#feature-bar-container-6")
+		var featureBarContainer7 = document.querySelector("#feature-bar-container-7")
+		var featureBarContainer8 = document.querySelector("#feature-bar-container-8")
+		var featureBarContainer9 = document.querySelector("#feature-bar-container-9")
+		var featureBarContainers = [featureBarContainer1, featureBarContainer2, featureBarContainer3, featureBarContainer4, featureBarContainer5, featureBarContainer6, featureBarContainer7, featureBarContainer8, featureBarContainer9]
+
+		var featureImg1 = document.querySelector("#feature-image-1")
+		var featureImg2 = document.querySelector("#feature-image-2")
+		var featureImg3 = document.querySelector("#feature-image-3")
+		var featureImg4 = document.querySelector("#feature-image-4")
+		var featureImg5 = document.querySelector("#feature-image-5")
+		var featureImg6 = document.querySelector("#feature-image-6")
+		var featureImg7 = document.querySelector("#feature-image-7")
+		var featureImg8 = document.querySelector("#feature-image-8")
+		var featureImg9 = document.querySelector("#feature-image-9")
+		var featureImgs = [featureImg1, featureImg2, featureImg3, featureImg4, featureImg5, featureImg6, featureImg7, featureImg8, featureImg9]
+
+		function handlefeatureClick(clickedId) {
+			for (let i = 0; i < 9; i++) {
+				features[i].id = ""
+				void features[i].offsetWidth
+				featureBars[i].id = ""
+				void featureBars[i].offsetWidth
+				featureBarContainers[i].id = ""
+				void featureBarContainers[i].offsetWidth
+				featureImgs[i].id = ""
+				void featureImgs[i].offsetWidth
+			}
+
+			for (let i = 1; i < 10; i++) {
+				if (i < Number(clickedId)) {
+					features[i-1].id = "feature-"+(((features.length - Number(clickedId)) + i + 1)).toString()
+					featureBars[i-1].id = "feature-bar-"+(((features.length - Number(clickedId)) + i + 1)).toString()
+					featureBarContainers[i-1].id = "feature-bar-container-"+(((features.length - Number(clickedId)) + i + 1)).toString()
+					featureImgs[i-1].id = "feature-image-"+(((features.length - Number(clickedId)) + i + 1)).toString()
+				}
+				if (i === Number(clickedId)) { 
+					features[i-1].id = "feature-1"
+					featureBars[i-1].id = "feature-bar-1"
+					featureBarContainers[i-1].id = "feature-bar-container-1"
+					featureImgs[i-1].id = "feature-image-1"
+				}
+				if (i > Number(clickedId)) {
+					features[i-1].id = "feature-"+(i - Number(clickedId) + 1).toString()
+					featureBars[i-1].id = "feature-bar-"+(i - Number(clickedId) + 1).toString()
+					featureBarContainers[i-1].id = "feature-bar-container-"+(i - Number(clickedId) + 1).toString()
+					featureImgs[i-1].id = "feature-image-"+(i - Number(clickedId) + 1).toString()
+				}
 			}
 		}
 		
